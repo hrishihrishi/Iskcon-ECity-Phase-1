@@ -1,0 +1,13 @@
+@layer components {
+  .iskcon-gradient-bg {
+    background: linear-gradient(135deg, #ff9933 0%, #ff6600 50%, #cc3300 100%);
+  }
+  
+  .iskcon-card-shadow {
+    box-shadow: 0 10px 30px -5px rgba(255, 102, 0, 0.15);
+  }
+
+  .sacred-border {
+    border-color: rgba(255, 153, 51, 0.3);
+  }
+}

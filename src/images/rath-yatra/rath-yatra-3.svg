@@ -1,0 +1,53 @@
+<svg width="800" height="400" viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="skyGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#FF6B6B;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#FFE4B5;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="800" height="400" fill="url(#skyGradient)" />
+  
+  <!-- Chariot Base -->
+  <rect x="250" y="150" width="300" height="200" fill="#8B4513" />
+  
+  <!-- Chariot Wheels -->
+  <circle cx="300" cy="350" r="35" fill="#654321" stroke="#8B4513" stroke-width="5" />
+  <circle cx="500" cy="350" r="35" fill="#654321" stroke="#8B4513" stroke-width="5" />
+  
+  <!-- Temple Structure -->
+  <path d="M275 100 L525 100 L550 150 L250 150 Z" fill="#FFD700" />
+  <path d="M350 50 L450 50 L400 0 Z" fill="#FFD700" />
+  
+  <!-- Devotees -->
+  <!-- Group 1 -->
+  <circle cx="100" cy="300" r="20" fill="#FFA07A" />
+  <rect x="90" y="320" width="20" height="40" fill="#FF8C00" />
+  <circle cx="150" cy="310" r="20" fill="#FFA07A" />
+  <rect x="140" y="330" width="20" height="40" fill="#FF4500" />
+  
+  <!-- Group 2 -->
+  <circle cx="650" cy="290" r="20" fill="#FFA07A" />
+  <rect x="640" y="310" width="20" height="40" fill="#FF8C00" />
+  <circle cx="700" cy="300" r="20" fill="#FFA07A" />
+  <rect x="690" y="320" width="20" height="40" fill="#FF4500" />
+  
+  <!-- Decorative Elements -->
+  <circle cx="400" cy="200" r="25" fill="#FF4500" />
+  <rect x="375" y="250" width="50" height="30" fill="#FF4500" />
+  
+  <!-- Flags and Garlands -->
+  <path d="M275 100 L255 70 L275 80 L255 90 Z" fill="#FF4500" />
+  <path d="M525 100 L545 70 L525 80 L545 90 Z" fill="#FF4500" />
+  <path d="M250 180 C 300 160, 500 160, 550 180" stroke="#FFD700" stroke-width="5" fill="none" />
+  
+  <!-- Musical Instruments -->
+  <circle cx="120" cy="350" r="10" fill="#FFD700" />
+  <rect x="115" y="360" width="10" height="20" fill="#8B4513" />
+  <circle cx="680" cy="350" r="10" fill="#FFD700" />
+  <rect x="675" y="360" width="10" height="20" fill="#8B4513" />
+  
+  <!-- Text -->
+  <text x="400" y="380" text-anchor="middle" fill="#000" font-size="24" font-family="Arial">Rath Yatra Grand Procession</text>
+</svg>
