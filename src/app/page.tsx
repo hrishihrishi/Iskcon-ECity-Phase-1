@@ -1,20 +1,45 @@
-import Banner from "@/componentsZero/Banner";
+import BannerSlider from "@/componentsZero/BannerSlider";
+import Banner from "@/componentsZero/BannerSlider";
 import Donation from "@/componentsZero/Donation";
 import EventsAndAnnouncements from "@/componentsZero/events-and-announcements";
 import Full_DonationCard from "@/componentsZero/Full_DonationCard";
 import { getCalendarEvents } from "@/lib/calendar.server";
+// import jagannathWelcome from "@public/images/jagannath-welcomes-you.jpg";
+
 
 export default async function Home() {
   const calendarEvents = await getCalendarEvents();
+  const sampleBannerData = [
+    {
+      id: 1,
+      link: '/contact',
+      image: '/images/jagannath-welcomes-you.jpg',
+      title: 'Welcome to ISKCON Temple Outreach',
+      subtitle: 'Experience the divine grace of Lord Jagannath, Baladeva, and Subhadra.'
+    },
+    {
+      id: 2,
+      link: '/donate',
+      image: '/images/rath-yatra-1.jpg',
+      title: 'Annual Rath Yatra Festival',
+      subtitle: 'Participate in the grand chariot procession and receive boundless spiritual blessings.'
+    },
+    {
+      id: 3,
+      link: '/donate',
+      image: '/images/jagannath-mahaprasadam.jpg',
+      title: 'Divine Mahaprasadam Distribution',
+      subtitle: 'Support our Anna Dan and prasadam distribution sevas reaching thousands daily.'
+    }
+  ];
   return (
     <div>
-      
-      <Banner />
       <section className="w-full">
+        <BannerSlider data={sampleBannerData} autoPlayInterval={6000} />
         <Full_DonationCard
           title="Lifetime Jagannath Rajbhog Seva"
           description="An eternal connection with Lord Jagannath through His divine prasadam. Receive the supreme blessings of the Lord for you and your family."
-          image="/images/iskcon-prasadam.jpg" 
+          image="/images/jagannath-mahaprasadam.jpg" 
           color="bg-gradient-to-br from-amber-950 via-orange-900 to-red-950"
           amount="₹ 51,001"
           badgeText="Limited Opportunity"
