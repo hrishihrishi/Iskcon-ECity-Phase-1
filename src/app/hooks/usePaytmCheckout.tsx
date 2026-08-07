@@ -1,5 +1,5 @@
-import { API_CONFIG } from '../config/api.config';
-import { initatePaymentRequest } from '../service/payment.service';
+import { API_CONFIG } from "../api/config/api.config";
+import { initatePaymentRequest } from "../service/payment.service";
 
 interface PaytmCheckoutConfig {
   orderId: string;
@@ -19,14 +19,14 @@ const usePaytmCheckout = () => {
     amount,
     orderId,
     txnToken,
-  }: Omit<PaytmCheckoutConfig, 'userId'>) => {
+  }: Omit<PaytmCheckoutConfig, "userId">) => {
     const paytmConfig = {
-      root: '',
-      flow: 'DEFAULT',
+      root: "",
+      flow: "DEFAULT",
       data: {
         orderId,
         token: txnToken,
-        tokenType: 'TXN_TOKEN',
+        tokenType: "TXN_TOKEN",
         amount,
       },
       merchant: {
@@ -34,9 +34,9 @@ const usePaytmCheckout = () => {
       },
       handler: {
         notifyMerchant: function (eventName: string, data: any) {
-          console.log('notifyMerchant handler function called');
-          console.log('eventName => ', eventName);
-          console.log('data => ', data);
+          console.log("notifyMerchant handler function called");
+          console.log("eventName => ", eventName);
+          console.log("data => ", data);
         },
       },
     };
@@ -48,7 +48,7 @@ const usePaytmCheckout = () => {
           window.Paytm.CheckoutJS.invoke();
         })
         .catch(function onError(error: Error) {
-          console.log('error => ', error);
+          console.log("error => ", error);
         });
     }
   };
@@ -57,17 +57,17 @@ const usePaytmCheckout = () => {
     amount,
     orderId,
     userId,
-  }: Pick<PaytmCheckoutConfig, 'amount' | 'orderId' | 'userId'>) => {
+  }: Pick<PaytmCheckoutConfig, "amount" | "orderId" | "userId">) => {
     const payload = JSON.stringify({ amount, orderId, customerId: userId });
     const res = await initatePaymentRequest(
       API_CONFIG.endpoints.payment.initiate,
-      { arg: payload }
+      { arg: payload },
     );
 
-    console.log('tranx', res);
+    console.log("tranx", res);
 
-    if ('txnToken' in res && res.txnToken) {
-      console.log('opening paytm popup');
+    if ("txnToken" in res && res.txnToken) {
+      console.log("opening paytm popup");
       openJsCheckoutPopup({
         amount,
         orderId,

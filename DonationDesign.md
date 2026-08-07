@@ -1,3 +1,9 @@
+Under 50k ?-> Payment Button.
+
+Above 50K ?-> 
+    suggest NEFT or Cheque + 
+    register intrest / whatsapp / call to temple admin.
+    
 
 
 
