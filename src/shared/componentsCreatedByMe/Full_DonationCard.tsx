@@ -1,6 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import './donation-card.css';
+import DonateButton from './DonateButton';
 
 interface ProgramDetail {
   label: string;
@@ -13,6 +14,8 @@ interface Full_DonationCardProps {
   image: string;
   color: string; // e.g. "from-amber-900 to-orange-950" or solid color string
   amount: string;
+  /** Amount in whole rupees, used by Razorpay checkout */
+  amountInRupees?: number;
   badgeText?: string;
   cornerBadge?: string;
   details?: ProgramDetail[];
@@ -25,6 +28,7 @@ export default function Full_DonationCard({
   image,
   color,
   amount,
+  amountInRupees,
   badgeText = "Limited Opportunity",
   cornerBadge = "Only 365 Spots",
   details = [
@@ -105,8 +109,8 @@ export default function Full_DonationCard({
             ))}
           </div>
 
-          {/* Big Rectangle Button for Amount */}
-          <div className="amount-button-box w-full rounded-xl p-4 text-center cursor-default shadow-inner">
+          {/* Amount Display */}
+          <div className="amount-button-box w-full rounded-xl p-4 text-center shadow-inner mb-4">
             <span className="block text-xs uppercase tracking-widest text-neutral-300 mb-1">
               One-time Contribution
             </span>
@@ -117,6 +121,19 @@ export default function Full_DonationCard({
               Limited to devotees only
             </span>
           </div>
+
+          {/* Razorpay Checkout Button */}
+          {amountInRupees && amountInRupees > 0 ? (
+            <DonateButton
+              amountInRupees={amountInRupees}
+              sevaName={title}
+              description={title}
+            />
+          ) : (
+            <div className="amount-button-box w-full rounded-xl p-4 text-center cursor-default shadow-inner">
+              <span className="text-sm text-neutral-300">Contact us to donate</span>
+            </div>
+          )}
 
         </div>
 

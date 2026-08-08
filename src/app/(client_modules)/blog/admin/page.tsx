@@ -1,7 +1,13 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { getAllBlogs, Blog } from "@/app/(client_modules)/blog/blog.actions";
+import {
+  getAllBlogs,
+  createBlog,
+  updateBlog,
+  deleteBlog,
+  Blog,
+} from "@/app/(client_modules)/blog/blog.actions";
 
 export default function AdminPage() {
   const [blogs, setBlogs] = useState<Blog[]>([]);
@@ -13,8 +19,12 @@ export default function AdminPage() {
     tags: "",
   });
 
-  useEffect(() => {
+  const loadBlogs = () => {
     getAllBlogs().then(setBlogs);
+  };
+
+  useEffect(() => {
+    loadBlogs();
   }, []);
 
   const openModal = (blog?: Blog) => {
@@ -29,6 +39,39 @@ export default function AdminPage() {
       setFormData({ id: "", title: "", body: "", tags: "" });
     }
     setModalOpen(true);
+  };
+
+  const handleSave = async () => {
+    if (!formData.title.trim() || !formData.body.trim()) return;
+
+    const tagsArray = formData.tags
+      .split(",")
+      .map((t) => t.trim())
+      .filter(Boolean);
+
+    if (formData.id) {
+      await updateBlog(formData.id, {
+        title: formData.title,
+        body: formData.body,
+        tags: tagsArray,
+      });
+    } else {
+      await createBlog({
+        title: formData.title,
+        body: formData.body,
+        tags: tagsArray,
+      });
+    }
+
+    setModalOpen(false);
+    loadBlogs();
+  };
+
+  const handleDelete = async (id: string) => {
+    if (confirm("Are you sure you want to delete this blog post?")) {
+      await deleteBlog(id);
+      loadBlogs();
+    }
   };
 
   return (
@@ -58,7 +101,10 @@ export default function AdminPage() {
                 >
                   Edit
                 </button>
-                <button className="bg-red-700/20 px-3 py-1 text-red-900 rounded-sm">
+                <button
+                  onClick={() => handleDelete(blog.id)}
+                  className="bg-red-700/20 px-3 py-1 text-red-900 rounded-sm"
+                >
                   Delete
                 </button>
               </div>
@@ -108,7 +154,7 @@ export default function AdminPage() {
                   Cancel
                 </button>
                 <button
-                  onClick={() => setModalOpen(false)}
+                  onClick={handleSave}
                   className="bg-[#4A3B32] text-[#FDFBF7] px-4 py-2 rounded-sm"
                 >
                   Save

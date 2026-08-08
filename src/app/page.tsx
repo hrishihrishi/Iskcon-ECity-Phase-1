@@ -44,6 +44,7 @@ export default async function Home() {
           image="/images/jagannath-mahaprasadam.jpg"
           color="bg-gradient-to-br from-amber-950 via-orange-900 to-red-950"
           amount="₹ 51,001"
+          amountInRupees={1}
           badgeText="Limited Opportunity"
           cornerBadge="Only 365 Spots"
           details={[

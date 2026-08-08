@@ -115,7 +115,7 @@ const EventsAndAnnouncements: React.FC<EventsAndAnnouncementsProps> = ({
             </div>
           )}
           <div className="mt-6 text-center">
-            <Link href={"/iskcon/vaishnava-calendar"}>
+            <Link href={"/vaishnava-calendar"}>
               <Button
                 variant="outline"
                 className="bg-purple-900 text-white uppercase"

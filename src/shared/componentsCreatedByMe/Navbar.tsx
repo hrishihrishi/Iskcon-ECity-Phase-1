@@ -55,7 +55,7 @@ export default function Navbar() {
           </ul>
 
           {/* Action Button: Vaishnava Calendar */}
-          <Link href="/iskcon/vaishnava-calendar" className="flex-shrink-0">
+          <Link href="/vaishnava-calendar" className="flex-shrink-0">
             <Button
               variant="outline"
               className="bg-orange-600 hover:bg-orange-700 text-white uppercase text-xs tracking-wider font-semibold border-none shadow-md transition-all hover:shadow-lg"

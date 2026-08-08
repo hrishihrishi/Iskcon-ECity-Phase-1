@@ -1,0 +1,1 @@
+only blog page is connected to mongoDB (hrishi.for.signups@gmail.com)
