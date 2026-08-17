@@ -1,6 +1,5 @@
 "use client";
 import useCalendarApi from "@/app/hooks/useCalendarApi";
-import PageHeader from "@/shared/components/page-header";
 import {
   Dialog,
   DialogContent,
@@ -49,40 +48,73 @@ const VaishnavaCalendarPage = () => {
     setSelectedEvents([]);
     setShowDialog(open);
   };
+
   return (
-    <main className="bg-teal-50">
-      <PageHeader className="bg-teal-100">
-        <div className="text-center">
-          <h1 className="text-xl md:text-3xl font-semibold text-slate-700">
+    <main className="min-h-screen bg-[#fff8ef] text-[#221b00]">
+      {/* Page Header */}
+      <section className="bg-[#745849] text-white py-12 md:py-16 px-5 md:px-8 text-center">
+        <div className="max-w-3xl mx-auto">
+          <span className="text-xs font-bold uppercase tracking-widest text-amber-200 block mb-2">
+            ISKCON Electronic City
+          </span>
+          <h1 className="text-3xl md:text-4xl font-serif font-bold text-white mb-3">
             Vaishnava Calendar
           </h1>
-          <p className="text-sm mt-2 max-w-md">
-            This is a Vaishnava calendar that shows the dates of the festivals
-            according to the Vaishnava tradition.
+          <p className="text-amber-100 text-sm md:text-base max-w-md mx-auto">
+            Festival dates and Ekadasi observances according to the Vaishnava tradition.
+            Click any date to see the day&apos;s spiritual significance.
           </p>
         </div>
-      </PageHeader>
-      <div className="container py-16">
-        <VaishnavaCalendar
-          events={events}
-          onChangeMonth={handleMonthChange}
-          onDateClick={handleDateClick}
-        />
+      </section>
+
+      {/* Calendar Container */}
+      <div className="max-w-7xl mx-auto px-5 md:px-8 py-10 md:py-14">
+        {/* Legend */}
+        <div className="flex flex-wrap items-center gap-4 mb-6 text-xs font-semibold text-[#4f453f]">
+          <div className="flex items-center gap-2">
+            <span className="w-3 h-3 rounded-full bg-[#e8621a] inline-block"></span>
+            Ekadasi
+          </div>
+          <div className="flex items-center gap-2">
+            <span className="w-3 h-3 rounded-full bg-[#745849] inline-block"></span>
+            Festival
+          </div>
+          <div className="flex items-center gap-2">
+            <span className="w-3 h-3 rounded-full bg-[#feedb7] border border-amber-900/20 inline-block"></span>
+            Auspicious Day
+          </div>
+        </div>
+
+        {/* Calendar Card */}
+        <div className="bg-white rounded-2xl border border-amber-900/10 shadow-sm overflow-hidden p-4 md:p-6">
+          <VaishnavaCalendar
+            events={events}
+            onChangeMonth={handleMonthChange}
+            onDateClick={handleDateClick}
+          />
+        </div>
       </div>
 
+      {/* Events Dialog — unchanged business logic */}
       <Dialog open={showDialog} onOpenChange={handleDialogOpenChange}>
-        <DialogContent>
+        <DialogContent className="bg-white border border-amber-900/10 rounded-2xl shadow-2xl max-w-md">
           <DialogHeader>
-            <DialogTitle className="md:text-2xl text-purple-800">
+            <DialogTitle className="font-serif text-xl md:text-2xl text-[#745849] mb-2">
               {formattedSelectedDate}
             </DialogTitle>
-            <ul className="pt-8 md:text-lg list-decimal pl-4">
-              {selectedEvents.map((event, idx) => (
-                <li key={event.id} className="text-left pl-2">
-                  {event.title}
-                </li>
-              ))}
-            </ul>
+            <div className="border-t border-amber-900/10 pt-4">
+              <ul className="space-y-2">
+                {selectedEvents.map((event) => (
+                  <li
+                    key={event.id}
+                    className="flex items-start gap-3 text-[#221b00] text-sm md:text-base"
+                  >
+                    <span className="mt-1 w-2 h-2 rounded-full bg-[#e8621a] shrink-0"></span>
+                    {event.title}
+                  </li>
+                ))}
+              </ul>
+            </div>
           </DialogHeader>
         </DialogContent>
       </Dialog>

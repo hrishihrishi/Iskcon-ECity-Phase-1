@@ -1,0 +1,530 @@
+<!doctype html>
+<html class="scroll-smooth" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>ISKCON Electronic City</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;700&amp;family=Inter:wght@400;500;700&amp;family=Chivo:wght@400;500;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Chivo:wght@700&amp;family=Inter:wght@400;600&amp;family=Libre+Caslon+Text:wght@400;700&amp;family=Playfair+Display:wght@700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "tertiary-fixed-dim": "#9ccde7",
+              "tertiary-container": "#aee0fb",
+              "on-primary-container": "#755949",
+              background: "#fff8ef",
+              "on-primary-fixed-variant": "#5b4133",
+              "primary-fixed": "#ffdbc9",
+              outline: "#81746e",
+              "on-tertiary-fixed-variant": "#144c62",
+              secondary: "#5d6300",
+              "surface-container": "#feedb7",
+              "inverse-primary": "#e4bfac",
+              "on-primary": "#ffffff",
+              "error-container": "#ffdad6",
+              "surface-dim": "#ead9a5",
+              "surface-variant": "#f3e2ac",
+              "on-surface": "#221b00",
+              "on-secondary": "#ffffff",
+              "on-secondary-fixed-variant": "#464a00",
+              "on-background": "#221b00",
+              "on-tertiary-container": "#32647b",
+              "surface-tint": "#745849",
+              "surface-bright": "#fff8ef",
+              "on-primary-fixed": "#2a170b",
+              "inverse-surface": "#39300a",
+              error: "#ba1a1a",
+              "surface-container-low": "#fff3d2",
+              "secondary-fixed": "#e2ea76",
+              "primary-container": "#f7d2be",
+              "secondary-fixed-dim": "#c5ce5e",
+              primary: "#745849",
+              "on-error-container": "#93000a",
+              "surface-container-lowest": "#ffffff",
+              "inverse-on-surface": "#fff0c3",
+              "outline-variant": "#d3c3bc",
+              "on-secondary-fixed": "#1b1d00",
+              "surface-container-high": "#f8e8b2",
+              "primary-fixed-dim": "#e4bfac",
+              surface: "#fff8ef",
+              "on-surface-variant": "#4f453f",
+              "on-error": "#ffffff",
+              tertiary: "#32647b",
+              "on-secondary-container": "#636900",
+              "secondary-container": "#e2ea76",
+              "surface-container-highest": "#f3e2ac",
+              "on-tertiary": "#ffffff",
+              "tertiary-fixed": "#c0e8ff",
+              "on-tertiary-fixed": "#001f2b",
+            },
+            borderRadius: {
+              DEFAULT: "0.25rem",
+              lg: "0.5rem",
+              xl: "0.75rem",
+              full: "9999px",
+            },
+            spacing: {
+              "margin-mobile": "20px",
+              "stack-lg": "64px",
+              gutter: "24px",
+              "stack-sm": "16px",
+              base: "8px",
+              "stack-md": "32px",
+              "container-max": "1280px",
+            },
+            fontFamily: {
+              "display-lg": ["Lexend"],
+              "body-md": ["Inter"],
+              "body-lg": ["Inter"],
+              "headline-md": ["Lexend"],
+              "label-caps": ["Chivo"],
+              "display-lg-mobile": ["Lexend"],
+            },
+            fontSize: {
+              "display-lg": [
+                "64px",
+                {
+                  lineHeight: "1.1",
+                  letterSpacing: "-0.02em",
+                  fontWeight: "600",
+                },
+              ],
+              "body-md": ["16px", { lineHeight: "1.6", fontWeight: "400" }],
+              "body-lg": ["18px", { lineHeight: "1.6", fontWeight: "400" }],
+              "headline-md": ["32px", { lineHeight: "1.3", fontWeight: "500" }],
+              "label-caps": [
+                "12px",
+                { lineHeight: "1", letterSpacing: "0.15em", fontWeight: "700" },
+              ],
+              "display-lg-mobile": [
+                "40px",
+                { lineHeight: "1.2", fontWeight: "600" },
+              ],
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body
+    class="bg-surface text-on-surface antialiased font-body-md text-body-md"
+  >
+    <!-- TopNavBar -->
+    <nav
+      class="fixed top-0 w-full z-50 bg-surface/70 backdrop-blur-md border-b border-secondary/20 shadow-sm transition-all duration-300 ease-in-out hidden md:block"
+    >
+      <div
+        class="flex justify-between items-center px-gutter max-w-container-max mx-auto h-20"
+      >
+        <div class="font-display-lg text-primary text-2xl">ISKCON E-City</div>
+        <ul
+          class="flex space-x-gutter items-center font-label-caps text-label-caps"
+        >
+          <li class="">
+            <a
+              class="text-primary font-bold border-b-2 border-primary pb-1"
+              href="#"
+              >Home</a
+            >
+          </li>
+          <li class="">
+            <a
+              class="text-on-surface-variant hover:text-primary-container duration-300 transition-colors"
+              href="#"
+              >About</a
+            >
+          </li>
+          <li class="">
+            <a
+              class="text-on-surface-variant hover:text-primary-container duration-300 transition-colors"
+              href="#"
+              >Causes</a
+            >
+          </li>
+          <li class="">
+            <a
+              class="text-on-surface-variant hover:text-primary-container duration-300 transition-colors"
+              href="#"
+              >Blog</a
+            >
+          </li>
+          <li class="">
+            <a
+              class="text-on-surface-variant hover:text-primary-container duration-300 transition-colors"
+              href="#"
+              >Contact</a
+            >
+          </li>
+        </ul>
+        <a
+          class="bg-primary text-on-primary font-label-caps text-label-caps py-3 px-6 rounded-full hover:bg-primary-container transition-colors duration-300"
+          href="#"
+          >Donate Now</a
+        >
+      </div>
+    </nav>
+    <!-- SideNavBar (Mobile) -->
+    <nav
+      class="fixed bottom-0 w-full z-[60] bg-surface-container-low border-t border-secondary/20 shadow-xl md:hidden"
+    >
+      <div class="flex justify-around items-center h-16 px-margin-mobile">
+        <a class="flex flex-col items-center gap-1 text-primary" href="#">
+          <span
+            class="material-symbols-outlined"
+            style="font-variation-settings: &quot;FILL&quot; 1"
+            >home</span
+          >
+          <span class="font-label-caps text-[10px] font-bold">Home</span>
+        </a>
+        <a
+          class="flex flex-col items-center gap-1 text-on-surface-variant"
+          href="#"
+        >
+          <span class="material-symbols-outlined">info</span>
+          <span class="font-label-caps text-[10px]">About</span>
+        </a>
+        <a
+          class="flex flex-col items-center gap-1 text-on-surface-variant"
+          href="#"
+        >
+          <span class="material-symbols-outlined">volunteer_activism</span>
+          <span class="font-label-caps text-[10px]">Causes</span>
+        </a>
+        <a
+          class="flex flex-col items-center gap-1 text-on-surface-variant"
+          href="#"
+        >
+          <span class="material-symbols-outlined">menu</span>
+          <span class="font-label-caps text-[10px]">More</span>
+        </a>
+      </div>
+    </nav>
+    
+    <!-- Hero Section -->
+    <section
+      class="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden"
+      style="min-height: 60vh"
+    >
+      <div
+        class="bg-cover bg-center absolute inset-0"
+        data-alt="A breathtaking golden hour view of a majestic Hindu temple complex with intricate stonework. The sky is bathed in warm hues of orange, gold, and soft purple, casting a serene and inviting glow over the architecture. The scene conveys a profound sense of spiritual peace and devotion, aligned with a modern, high-end visual aesthetic."
+        style="
+          background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuAbSQUu0M2FycObir2iQe5njgTxaOdKlADzIZxEwJm8TrP8HAeeaWfUhQUxfdMM_xUE2Bu0ethvqjcrP5TMQNh-KWjmEqPwQ3sK9wca7zMQkE6g3J-xah_aEHNuADXFULbE9mrx3cgUzyqa_ysFwDC9_zpKTq_FwglFH8jckLqrIi2o-1Br7P8ky_MMu1VmTbTUf7Bi48ZHmpgXhYKN_2YxqDmO-KanHc3ewlQwqrRsIo0IqimkcwCUvw&quot;);
+        "
+      >
+        <div class="absolute inset-0 bg-black/40"></div>
+      </div>
+      <div
+        class="relative z-10 text-center px-margin-mobile md:px-gutter max-w-container-max mx-auto flex flex-col items-center"
+      >
+        <h1
+          class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-on-primary mb-stack-sm text-balance"
+        >
+          Come. Chant. Be Transformed.
+        </h1>
+        <p
+          class="font-body-lg text-body-lg text-on-primary/90 mb-stack-md max-w-2xl"
+        >
+          Your spiritual home in South Bengaluru. Experience the warmth of
+          tradition in the heart of the digital city.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4">
+          <a
+            class="bg-primary text-on-primary font-label-caps text-label-caps py-4 px-8 rounded-full hover:bg-primary-container transition-colors duration-300"
+            href="#"
+          >
+            Explore Our Causes
+          </a>
+          <a
+            class="border-2 border-secondary-fixed text-secondary-fixed font-label-caps text-label-caps py-4 px-8 rounded-full hover:bg-secondary-fixed hover:text-on-secondary-fixed transition-colors duration-300"
+            href="#"
+          >
+            Know Our Story
+          </a>
+        </div>
+      </div>
+    </section>
+    <!-- Featured Seva Section -->
+    <section
+      class="py-stack-lg px-margin-mobile md:px-gutter max-w-container-max mx-auto"
+    >
+      <h2
+        class="font-headline-md text-headline-md text-primary mb-stack-md text-center"
+      >
+        Featured Seva
+      </h2>
+      <div
+        class="bg-surface-container rounded-xl flex flex-col md:flex-row overflow-hidden shadow-sm"
+      >
+        <div class="md:w-1/2">
+          <img
+            alt="Seva"
+            class="w-full h-full object-cover rounded-none min-h-[300px]"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBTjbLQPgZj7njPxQkkdFs4dl3BJO6BfRPK8tHlFhaL27aKV1ovI0sV0PdHmpPw7LKtWtKWbBRIDS26cH1loOpbGLBjG20F2yX6_JGlnIVblDSMhVhJ7Q18ishFCdVF4G0fZiqAnVBf3KzD41qFNneampLbj68St3QlS0EuH4X2pdYjXY9dz7oLfGBoBvgFfogBiHpMkRfr-qA-wYn4aunJDpgoSaA1r45z9sBIhHZBrq2HWh5Ruug1WA"
+          />
+        </div>
+        <div class="md:w-1/2 p-stack-md flex flex-col justify-center">
+          <h3 class="font-headline-md text-2xl text-on-surface mb-base">
+            Nitya Annadana Seva
+          </h3>
+          <p class="font-body-md text-on-surface-variant mb-stack-md">
+            Support the daily distribution of sanctified prasadam to thousands
+            of visitors and underprivileged communities. Your contribution
+            brings spiritual and physical nourishment.
+          </p>
+          <div>
+            <a
+              class="bg-primary text-on-primary font-label-caps text-label-caps py-3 px-6 rounded-full hover:bg-primary-container hover:text-on-primary-container transition-colors inline-block"
+              href="#"
+              >View More</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Upcoming Events Section -->
+    <section
+      class="bg-surface-container-low py-stack-lg px-margin-mobile md:px-gutter"
+    >
+      <div class="max-w-container-max mx-auto">
+        <h2
+          class="font-headline-md text-headline-md text-primary mb-stack-md text-center"
+        >
+          Upcoming Events
+        </h2>
+        <div class="flex flex-col gap-gutter">
+          <!-- Event 1 -->
+          <div
+            class="bg-surface rounded-xl p-stack-sm border border-outline-variant shadow-sm flex flex-col"
+          >
+            <div class="text-secondary font-label-caps text-label-caps mb-2">
+              August 15, 2024
+            </div>
+            <h3 class="font-headline-md text-xl text-on-surface mb-2">
+              Sri Krishna Janmashtami
+            </h3>
+            <p class="font-body-md text-on-surface-variant mb-4 flex-grow">
+              Join us for the grand celebration of Lord Krishna's appearance day
+              with kirtan, abhishek, and massive prasadam distribution.
+            </p>
+            <a
+              class="text-primary font-label-caps text-label-caps hover:underline mt-auto"
+              href="#"
+              >Learn More →</a
+            >
+          </div>
+          <!-- Event 2 -->
+          <div
+            class="bg-surface rounded-xl p-stack-sm border border-outline-variant shadow-sm flex flex-col"
+          >
+            <div class="text-secondary font-label-caps text-label-caps mb-2">
+              August 26, 2024
+            </div>
+            <h3 class="font-headline-md text-xl text-on-surface mb-2">
+              Sri Vyasa Puja
+            </h3>
+            <p class="font-body-md text-on-surface-variant mb-4 flex-grow">
+              Honoring the appearance day of our beloved spiritual master, His
+              Divine Grace A.C. Bhaktivedanta Swami Prabhupada.
+            </p>
+            <a
+              class="text-primary font-label-caps text-label-caps hover:underline mt-auto"
+              href="#"
+              >Learn More →</a
+            >
+          </div>
+          <!-- Event 3 -->
+          <div
+            class="bg-surface rounded-xl p-stack-sm border border-outline-variant shadow-sm flex flex-col"
+          >
+            <div class="text-secondary font-label-caps text-label-caps mb-2">
+              September 11, 2024
+            </div>
+            <h3 class="font-headline-md text-xl text-on-surface mb-2">
+              Radhashtami
+            </h3>
+            <p class="font-body-md text-on-surface-variant mb-4 flex-grow">
+              Celebrate the glorious appearance day of Srimati Radharani with
+              special darshan, bhajans, and discourses.
+            </p>
+            <a
+              class="text-primary font-label-caps text-label-caps hover:underline mt-auto"
+              href="#"
+              >Learn More →</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- From the Temple Desk Section -->
+    <section
+      class="py-stack-lg px-margin-mobile md:px-gutter max-w-container-max mx-auto"
+    >
+      <h2
+        class="font-headline-md text-headline-md text-primary mb-stack-md text-center"
+      >
+        From the Temple Desk
+      </h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+        <!-- Blog 1 -->
+        <div
+          class="bg-surface-container rounded-xl flex flex-col overflow-hidden shadow-sm hover:shadow-md transition-shadow"
+        >
+          <div class="w-full h-48">
+            <img
+              alt="Blog Image"
+              class="w-full h-full object-cover rounded-none"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuAZhd1QLl3QYyl2hGGmcH9Kfbjbh2M3coo9yBK8Buno7TwhNoLkHPxGHRWz-9N1VfwIOUT12VTivBcolANS0FphkudagY2CdRNoGjuHxX4mG44dagKsC3N6GHSXEd0yFgDJPX-5l48bk3DTrn6vy8tSXa7keYjL7d9gMAtPkVebI5Fuh0rsGjLH7X4g70T1C83J2daC_pOsO3UnlkNGSm7AG8DCMuwRAk1APm6_sZUGaI70UYtstxF1xg"
+            />
+          </div>
+          <div class="w-full p-stack-sm flex flex-col justify-center">
+            <h3 class="font-headline-md text-xl text-on-surface mb-2">
+              The Power of Holy Name
+            </h3>
+            <p class="font-body-md text-on-surface-variant mb-4 line-clamp-2">
+              Discover how the simple act of chanting the Maha Mantra can
+              transform your consciousness and bring profound peace in today's
+              fast-paced world.
+            </p>
+            <div>
+              <a
+                class="text-primary font-label-caps text-label-caps hover:underline"
+                href="#"
+                >Read More</a
+              >
+            </div>
+          </div>
+        </div>
+        <!-- Blog 2 -->
+        <div
+          class="bg-surface-container rounded-xl flex flex-col overflow-hidden shadow-sm hover:shadow-md transition-shadow"
+        >
+          <div class="w-full h-48">
+            <img
+              alt="Blog Image"
+              class="w-full h-full object-cover rounded-none"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuAy271XXUbBi_HXEtmZuj54D4nukfsUYWSSNyfmPvNRdKoR17xunMTzbiDJ1ivVvGe6T5W7bRsOefe-Fzi0kKD9weIWElfgo4mI7sEYZ6sngQlZAy-zv-RZnrFfE4qrCoOPfZ4rySofnSZSDDrDgP1O8YWqPjMasEuLASgYDjVO-Vovyy1FBOonobN9q_dqiPmbBU9cKtTqOGJ2df7vPY5-C3hCkU2rvwGqEhkUrxHcq7J6-ZDMHY52Jw"
+            />
+          </div>
+          <div class="w-full p-stack-sm flex flex-col justify-center">
+            <h3 class="font-headline-md text-xl text-on-surface mb-2">
+              Finding Balance in City Life
+            </h3>
+            <p class="font-body-md text-on-surface-variant mb-4 line-clamp-2">
+              Practical tips from the Bhagavad Gita on maintaining spiritual
+              equilibrium while navigating the demands of a modern corporate
+              career.
+            </p>
+            <div>
+              <a
+                class="text-primary font-label-caps text-label-caps hover:underline"
+                href="#"
+                >Read More</a
+              >
+            </div>
+          </div>
+        </div>
+        <!-- Blog 3 -->
+        <div
+          class="bg-surface-container rounded-xl flex flex-col overflow-hidden shadow-sm hover:shadow-md transition-shadow"
+        >
+          <div class="w-full h-48">
+            <img
+              alt="Blog Image"
+              class="w-full h-full object-cover rounded-none"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuB-Db6_x5naXUZSJ9xEqflQX7C7ut4TaJOHqWIXZ-D6-a9xpwBZLYEijQuBQyODEN7IydweOhd1_EM0qrVkgc7SZWWNtXV4-spU7n222ALP4S_nSilf07OhjLpzbplOBWlBVKyOt4uVyA8PJ1gjcWB_Omx7B50ojBPENa5COV4_iy567L7lxfE84KPRwqV-koX3JmvFkELj38qUEwwT5tqDTLFSIRRnSD_JkEKkYRRYj_JYVhNw64Dn-A"
+            />
+          </div>
+          <div class="w-full p-stack-sm flex flex-col justify-center">
+            <h3 class="font-headline-md text-xl text-on-surface mb-2">
+              Understanding Prasadam
+            </h3>
+            <p class="font-body-md text-on-surface-variant mb-4 line-clamp-2">
+              Why is temple food so special? Learn the philosophy behind
+              offering food to the Lord and how it purifies our existence.
+            </p>
+            <div>
+              <a
+                class="text-primary font-label-caps text-label-caps hover:underline"
+                href="#"
+                >Read More</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Footer -->
+    <section
+      class="py-stack-lg px-margin-mobile md:px-gutter text-center bg-surface"
+    >
+      <div class="max-w-container-max mx-auto">
+        <a
+          href="#"
+          class="inline-block bg-secondary-fixed text-on-secondary-fixed font-label-caps text-label-caps py-6 px-12 rounded-full text-xl hover:bg-secondary-fixed-dim transition-all shadow-xl border-2 border-secondary-fixed"
+          >Visit Temple</a
+        >
+      </div>
+    </section>
+    <footer
+      class="bg-on-tertiary-fixed-variant w-full py-stack-md border-t border-secondary-fixed/30 mt-stack-lg mb-16 md:mb-0"
+    >
+      <div
+        class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-mobile md:px-gutter max-w-container-max mx-auto"
+      >
+        <div class="col-span-1 md:col-span-4 mb-4">
+          <div class="font-display-lg text-secondary-fixed text-xl">
+            ISKCON E-City
+          </div>
+        </div>
+        <div class="flex flex-col gap-2">
+          <a
+            class="text-secondary-fixed/80 font-body-md text-body-md hover:text-secondary-fixed transition-colors opacity-90 hover:opacity-100 transition-opacity"
+            href="#"
+            >Privacy Policy</a
+          >
+          <a
+            class="text-secondary-fixed/80 font-body-md text-body-md hover:text-secondary-fixed transition-colors opacity-90 hover:opacity-100 transition-opacity"
+            href="#"
+            >Terms of Service</a
+          >
+        </div>
+        <div class="flex flex-col gap-2">
+          <a
+            class="text-secondary-fixed/80 font-body-md text-body-md hover:text-secondary-fixed transition-colors opacity-90 hover:opacity-100 transition-opacity"
+            href="#"
+            >Volunteer</a
+          >
+          <a
+            class="text-secondary-fixed/80 font-body-md text-body-md hover:text-secondary-fixed transition-colors opacity-90 hover:opacity-100 transition-opacity"
+            href="#"
+            >Sitemap</a
+          >
+        </div>
+        <div
+          class="col-span-1 md:col-span-4 mt-8 pt-4 border-t border-secondary-fixed/20"
+        >
+          <p class="text-secondary-fixed/60 font-body-md text-sm">
+            © 2024 ISKCON Electronic City. All Spiritual Rights Reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

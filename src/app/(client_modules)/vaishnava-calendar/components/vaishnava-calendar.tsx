@@ -64,9 +64,14 @@ const VaishnavaCalendar: React.FC<Props> = ({
       />
 
       {events.length === 0 && (
-        <div className="absolute flex w-full h-2/3 justify-center bg-slate-900/60 items-center top-14 left-0 z-10">
-          <div className="flex flex-col text-white text-center animate-pulse">
-            <h2 className="uppercase text-3xl font-light">Ecity</h2>
+        <div className="absolute flex w-full h-2/3 justify-center bg-[#fff8ef]/80 backdrop-blur-sm items-center top-14 left-0 z-10 rounded-2xl">
+          <div className="flex flex-col items-center gap-3 animate-pulse text-center">
+            <div className="w-12 h-12 rounded-full bg-[#f7d2be] flex items-center justify-center text-[#745849] text-2xl">
+              🪷
+            </div>
+            <p className="text-[#745849] font-serif font-bold text-lg uppercase tracking-widest">
+              Loading events…
+            </p>
           </div>
         </div>
       )}

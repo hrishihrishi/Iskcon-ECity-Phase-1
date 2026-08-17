@@ -75,35 +75,54 @@ export default function AdminPage() {
   };
 
   return (
-    <div className="min-h-screen bg-[#F4EFE6] p-8 font-serif text-[#4A3B32]">
+    <div className="min-h-screen bg-[#fff8ef] text-[#221b00] px-5 md:px-8 py-10">
       <div className="mx-auto max-w-5xl">
+        {/* Page Header */}
         <div className="mb-8 flex items-center justify-between">
-          <h1 className="text-4xl font-bold">Blog Manager</h1>
+          <div>
+            <span className="text-xs font-bold uppercase tracking-widest text-[#745849] block mb-1">
+              Content Management
+            </span>
+            <h1 className="text-3xl md:text-4xl font-serif font-bold text-[#221b00]">
+              Blog Manager
+            </h1>
+          </div>
           <button
             onClick={() => openModal()}
-            className="bg-[#4A3B32] text-[#FDFBF7] px-6 py-2 rounded-sm shadow-md hover:bg-[#3A2B22]"
+            className="bg-[#e8621a] hover:bg-[#d05615] text-white font-bold text-xs uppercase tracking-wider px-6 py-3 rounded-full shadow-md transition-colors duration-200 flex items-center gap-2"
           >
-            New +
+            <span>+</span> New Post
           </button>
         </div>
 
-        <div className="space-y-4">
+        {/* Blog List */}
+        <div className="space-y-3">
+          {blogs.length === 0 && (
+            <div className="bg-white rounded-2xl border border-amber-900/10 p-10 text-center text-[#4f453f] italic">
+              No blog posts yet. Create your first one!
+            </div>
+          )}
           {blogs.map((blog) => (
             <div
               key={blog.id}
-              className="flex items-center justify-between rounded-sm border-2 border-[#D4C3B3] bg-[#FDFBF7] p-4"
+              className="flex items-center justify-between bg-white rounded-2xl border border-amber-900/10 shadow-sm px-6 py-4 hover:shadow-md transition-shadow"
             >
-              <span className="text-xl font-semibold">{blog.title}</span>
-              <div className="space-x-2">
+              <div className="min-w-0 flex-1 pr-4">
+                <p className="text-base md:text-lg font-serif font-semibold text-[#221b00] truncate">
+                  {blog.title}
+                </p>
+                <p className="text-xs text-[#4f453f] mt-0.5">{blog.date}</p>
+              </div>
+              <div className="flex items-center gap-2 shrink-0">
                 <button
                   onClick={() => openModal(blog)}
-                  className="bg-amber-700/20 px-3 py-1 text-amber-900 rounded-sm"
+                  className="bg-[#fff3d2] hover:bg-[#feedb7] text-[#745849] font-bold text-xs uppercase tracking-wider px-4 py-2 rounded-full transition-colors"
                 >
                   Edit
                 </button>
                 <button
                   onClick={() => handleDelete(blog.id)}
-                  className="bg-red-700/20 px-3 py-1 text-red-900 rounded-sm"
+                  className="bg-red-50 hover:bg-red-100 text-red-700 font-bold text-xs uppercase tracking-wider px-4 py-2 rounded-full transition-colors"
                 >
                   Delete
                 </button>
@@ -114,50 +133,60 @@ export default function AdminPage() {
 
         {/* Modal Overlay */}
         {isModalOpen && (
-          <div className="fixed inset-0 flex items-center justify-center bg-black/50 p-4">
-            <div className="w-full max-w-lg rounded-sm border-2 border-[#D4C3B3] bg-[#FDFBF7] p-6 shadow-2xl">
-              <h2 className="mb-4 text-2xl font-bold">
-                {formData.id ? "Edit Scroll" : "Inscribe New Scroll"}
-              </h2>
-
-              <input
-                value={formData.title}
-                onChange={(e) =>
-                  setFormData({ ...formData, title: e.target.value })
-                }
-                placeholder="Title"
-                className="mb-4 w-full rounded-sm border-2 border-[#D4C3B3] p-2 bg-[#F4EFE6]"
-              />
-              <textarea
-                value={formData.body}
-                onChange={(e) =>
-                  setFormData({ ...formData, body: e.target.value })
-                }
-                placeholder="Body..."
-                rows={5}
-                className="mb-4 w-full rounded-sm border-2 border-[#D4C3B3] p-2 bg-[#F4EFE6]"
-              />
-              <input
-                value={formData.tags}
-                onChange={(e) =>
-                  setFormData({ ...formData, tags: e.target.value })
-                }
-                placeholder="Tags (comma separated)"
-                className="mb-6 w-full rounded-sm border-2 border-[#D4C3B3] p-2 bg-[#F4EFE6]"
-              />
-
-              <div className="flex justify-end gap-2">
+          <div className="fixed inset-0 flex items-center justify-center bg-black/40 backdrop-blur-sm p-4 z-50">
+            <div className="w-full max-w-lg bg-white rounded-2xl border border-amber-900/10 p-6 md:p-8 shadow-2xl">
+              <div className="flex items-center justify-between mb-6">
+                <h2 className="text-xl md:text-2xl font-serif font-bold text-[#221b00]">
+                  {formData.id ? "Edit Post" : "New Post"}
+                </h2>
                 <button
                   onClick={() => setModalOpen(false)}
-                  className="px-4 py-2 border border-[#D4C3B3] rounded-sm"
+                  className="text-[#4f453f] hover:text-[#221b00] text-2xl leading-none"
+                >
+                  ×
+                </button>
+              </div>
+
+              <div className="space-y-4">
+                <input
+                  value={formData.title}
+                  onChange={(e) =>
+                    setFormData({ ...formData, title: e.target.value })
+                  }
+                  placeholder="Post Title"
+                  className="w-full rounded-xl border border-amber-900/20 bg-[#fff8ef] px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-[#e8621a]/40 transition-all"
+                />
+                <textarea
+                  value={formData.body}
+                  onChange={(e) =>
+                    setFormData({ ...formData, body: e.target.value })
+                  }
+                  placeholder="Write your article body here..."
+                  rows={6}
+                  className="w-full rounded-xl border border-amber-900/20 bg-[#fff8ef] px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-[#e8621a]/40 transition-all resize-none"
+                />
+                <input
+                  value={formData.tags}
+                  onChange={(e) =>
+                    setFormData({ ...formData, tags: e.target.value })
+                  }
+                  placeholder="Tags (comma separated, e.g. Philosophy, Meditation)"
+                  className="w-full rounded-xl border border-amber-900/20 bg-[#fff8ef] px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-[#e8621a]/40 transition-all"
+                />
+              </div>
+
+              <div className="flex justify-end gap-3 mt-6">
+                <button
+                  onClick={() => setModalOpen(false)}
+                  className="px-5 py-2.5 border border-amber-900/20 rounded-full text-sm font-semibold text-[#4f453f] hover:bg-[#fff3d2] transition-colors"
                 >
                   Cancel
                 </button>
                 <button
                   onClick={handleSave}
-                  className="bg-[#4A3B32] text-[#FDFBF7] px-4 py-2 rounded-sm"
+                  className="bg-[#e8621a] hover:bg-[#d05615] text-white font-bold text-sm px-6 py-2.5 rounded-full transition-colors shadow-sm"
                 >
-                  Save
+                  {formData.id ? "Save Changes" : "Publish"}
                 </button>
               </div>
             </div>

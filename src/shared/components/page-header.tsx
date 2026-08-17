@@ -12,14 +12,13 @@ const PageHeader: React.FC<Props> = ({ className, title, children }) => {
   return (
     <section
       className={cn(
-        'h-40 md:h-[200px] bg-teal-300 flex justify-center items-center',
+        'min-h-[180px] md:min-h-[220px] bg-[#f7d2be]/40 flex justify-center items-center border-b border-amber-900/10',
         className
       )}
     >
       {title && (
-        <h1 className="text-lg md:text-2xl lg:text-5xl font-bold">{title}</h1>
+        <h1 className="text-2xl md:text-4xl font-serif font-bold text-[#221b00]">{title}</h1>
       )}
-
       {children}
     </section>
   );
