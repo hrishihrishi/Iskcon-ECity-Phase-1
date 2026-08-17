@@ -31,10 +31,10 @@ export default function NumberTicker({
 
   useEffect(
     () =>
-      springValue.on("change", (latest) => {
+      springValue.on("change", (latest: number) => {
         if (ref.current) {
           ref.current.textContent = Intl.NumberFormat("en-US").format(
-            latest.toFixed(0),
+            Number(latest.toFixed(0)),
           );
         }
       }),

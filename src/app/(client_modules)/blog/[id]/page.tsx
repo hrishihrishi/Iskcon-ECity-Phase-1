@@ -25,7 +25,8 @@ export default function BlogDetails({
   const handleVote = async (type: "like" | "dislike") => {
     if (!blog) return;
     // Optimistic UI Update
-    setBlog({ ...blog, [type + "s"]: blog[type + "s"] + 1 });
+    const key = (type + "s") as "likes" | "dislikes";
+    setBlog({ ...blog, [key]: blog[key] + 1 });
     await updateLikesDislikes(blog.id, type);
   };
 
