@@ -1,9 +1,10 @@
+// src/app/page.tsx
+
 import BannerSlider from "@/shared/componentsCreatedByMe/BannerSlider";
 import EventsAndAnnouncements from "@/shared/componentsCreatedByMe/events-and-announcements";
 import { getCalendarEvents } from "@/app/(client_modules)/vaishnava-calendar/service/calendar.server";
-import DonationCard from "./(client_modules)/seva/components/DonationCard";
-import { SEVA_ITEMS } from "@/data/donation";
-import Footer from "@/shared/componentsCreatedByMe/Footer";
+
+export const dynamic = "force-dynamic";
 
 export default async function Home() {
   const calendarEvents = await getCalendarEvents();
@@ -34,25 +35,15 @@ export default async function Home() {
     },
   ];
 
-  console.log("SEVA_ITEMS[0]:", SEVA_ITEMS[0]); // Log the first item of SEVA_ITEMS to verify its structure
-  console.log("...SEVA_ITEMS[0]:", {...SEVA_ITEMS[0]}); // Log the first item of SEVA_ITEMS to verify its structure
-
-  
   return (
     <main className="min-h-screen bg-blue-500">
       <section className="mx-auto flex flex-col gap-6">
-        
-
         <div className="overflow-hidden">
           <BannerSlider data={sampleBannerData} autoPlayInterval={6000} />
         </div>
-
-        {/* <div className="rounded-[32px] border border-orange-200/70 bg-white/80 p-2 shadow-[0_25px_70px_-25px_rgba(154,52,18,0.28)] md:p-3">
-          <DonationCard {...SEVA_ITEMS[0]} />
-        </div> */}
       </section>
 
-      <EventsAndAnnouncements calendarEvents={calendarEvents} />
+      <EventsAndAnnouncements calendarEvents={calendarEvents || []} />
     </main>
   );
 }

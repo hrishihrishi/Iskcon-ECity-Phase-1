@@ -1,5 +1,9 @@
+// src/app/(client_modules)/blog/page.tsx
+
 import { getAllBlogs } from "@/app/(client_modules)/blog/blog.actions";
 import BlogCard from "@/shared/componentsCreatedByMe/BlogCard";
+
+export const dynamic = "force-dynamic";
 
 export default async function BlogHome() {
   const blogs = await getAllBlogs();
@@ -37,9 +41,15 @@ export default async function BlogHome() {
 
         {/* Blog Grid */}
         <section className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-          {blogs.map((blog) => (
-            <BlogCard data={blog} key={blog.id} />
-          ))}
+          {blogs.length > 0 ? (
+            blogs.map((blog) => (
+              <BlogCard data={blog} key={blog.id} />
+            ))
+          ) : (
+            <p className="col-span-full text-center text-[#745849]">
+              No blog posts available at the moment.
+            </p>
+          )}
         </section>
       </div>
     </div>

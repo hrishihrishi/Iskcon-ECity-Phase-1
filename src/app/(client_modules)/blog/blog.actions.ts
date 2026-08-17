@@ -41,11 +41,19 @@ function serializeBlog(doc: IBlog): Blog {
   };
 }
 
+// src/app/(client_modules)/blog/blog.actions.ts
+
 export async function getAllBlogs(): Promise<Blog[]> {
-  await connectDB();
-  const blogs = await BlogModel.find({}).sort({ createdAt: -1 }).exec();
-  return blogs.map(serializeBlog);
+  try {
+    await connectDB();
+    const blogs = await BlogModel.find({}).sort({ createdAt: -1 }).exec();
+    return blogs.map(serializeBlog);
+  } catch (error) {
+    console.error("Failed to fetch blogs from database:", error);
+    return [];
+  }
 }
+
 
 export async function getBlog(id: string): Promise<Blog | null> {
   await connectDB();
