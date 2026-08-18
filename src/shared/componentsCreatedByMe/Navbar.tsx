@@ -33,7 +33,7 @@ const Navbar: React.FC = () => {
           ISKCON E-City
         </div>
         
-        <ul className="navbar-nav">
+        <ul className="navbar-nav sm:text-[4.5vw] md:text-[2vw] lg:text-[1.5vw]">
           {NAV_LINKS.map((link) => {
             const isActive = link.href === '/' 
               ? pathname === '/' 
@@ -52,7 +52,8 @@ const Navbar: React.FC = () => {
           })}
         </ul>
 
-        <Link href="/donate" className="donate-btn lg:w-auto md:w-auto w-full text-center mb-4">
+        <Link href="/donate" 
+        className="donate-btn lg:w-auto md:w-auto w-full text-center sm:text-xl md:text-2xl lg:text-2xl mb-4">
           Donate Now
         </Link>
         

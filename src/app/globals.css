@@ -141,9 +141,7 @@
 /* Navbar.css */
 .navbar {
   background-color: #185c93;
-  top: 0;
   width: 100%;
-  z-index: 50;
   backdrop-filter: blur(12px);
   /* border-bottom: 1px solid rgba(93, 99, 0, 0.2);  secondary color with opacity; */
   box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
@@ -176,7 +174,7 @@
   align-items: center;
   flex-wrap: wrap;
   font-family: sans-serif;
-  font-size: 15px;
+  /* font-size: 15px; */
   letter-spacing: 0.05em;
   font-weight: 700;
   list-style: none;
@@ -207,7 +205,7 @@
   background-color: #4ab5e7; 
   color: #ffffff; 
   font-family: 'Chivo', sans-serif;
-  font-size: 12px;
+  /* font-size: 12px; */
   letter-spacing: 0.05em;
   font-weight: 700;
   padding: 8px 16px; 
