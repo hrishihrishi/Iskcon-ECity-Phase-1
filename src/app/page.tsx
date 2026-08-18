@@ -29,8 +29,8 @@ const placeOfWorshipSchema = {
     "Hare Krishna Temple Electronic City",
   ],
   url: "https://iskcon-e-city-phase-1-two.vercel.app/",
-  logo: "https://iskcon-e-city-phase-1-two.vercel.app//logo.png",
-  image: "https://iskcon-e-city-phase-1-two.vercel.app//images/RK4.jpg",
+  logo: "https://iskcon-e-city-phase-1-two.vercel.app/logo.png",
+  image: "https://iskcon-e-city-phase-1-two.vercel.app/images/RK4.jpg",
   description:
     "Official center of the International Society for Krishna Consciousness (ISKCON) in Electronic City, Bengaluru. Daily darshan, Sunday Love Feast, prasadam distribution, Bhakti Yoga, and community outreach programs.",
   address: {

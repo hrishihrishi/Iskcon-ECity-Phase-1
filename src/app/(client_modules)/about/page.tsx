@@ -7,9 +7,9 @@ export const metadata: Metadata = {
   description:
     "Learn about ISKCON Electronic City's spiritual lineage, our Founder-Acharya His Divine Grace A.C. Bhaktivedanta Swami Prabhupada, and our mission of spreading Bhakti Yoga and Vedic wisdom across Bengaluru.",
   alternates: {
-    canonical: "https://iskcon-e-city-phase-1-two.vercel.app//about",
+    canonical: "https://iskcon-e-city-phase-1-two.vercel.app/about",
   },
-  openGraph: { url: "https://iskcon-e-city-phase-1-two.vercel.app//about" },
+  openGraph: { url: "https://iskcon-e-city-phase-1-two.vercel.app/about" },
 };
 
 const Founder = () => {

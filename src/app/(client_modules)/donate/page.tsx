@@ -8,9 +8,9 @@ export const metadata: Metadata = {
   description:
     "Donate to ISKCON Electronic City and support Anna Dana (free meal distribution), deity worship sevas, Bhakti Yoga programs, and community outreach in Bengaluru's Electronic City. Your offering makes a difference.",
   alternates: {
-    canonical: "https://iskcon-e-city-phase-1-two.vercel.app//donate",
+    canonical: "https://iskcon-e-city-phase-1-two.vercel.app/donate",
   },
-  openGraph: { url: "https://iskcon-e-city-phase-1-two.vercel.app//donate" },
+  openGraph: { url: "https://iskcon-e-city-phase-1-two.vercel.app/donate" },
 };
 
 import {

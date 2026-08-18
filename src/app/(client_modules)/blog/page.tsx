@@ -11,9 +11,9 @@ export const metadata: Metadata = {
   description:
     "Read spiritual insights, Bhakti Yoga teachings, festival updates, and temple news from ISKCON Electronic City, Bengaluru. Explore articles on Krishna consciousness, prasadam, and devotional life in E-City.",
   alternates: {
-    canonical: "https://iskcon-e-city-phase-1-two.vercel.app//blog",
+    canonical: "https://iskcon-e-city-phase-1-two.vercel.app/blog",
   },
-  openGraph: { url: "https://iskcon-e-city-phase-1-two.vercel.app//blog" },
+  openGraph: { url: "https://iskcon-e-city-phase-1-two.vercel.app/blog" },
 };
 
 export default async function BlogHome() {

@@ -32,13 +32,13 @@ export async function generateMetadata({
     title,
     description,
     alternates: {
-      canonical: `https://iskcon-e-city-phase-1-two.vercel.app//blog/${id}`,
+      canonical: `https://iskcon-e-city-phase-1-two.vercel.app/blog/${id}`,
     },
     openGraph: {
       type: "article",
       title,
       description,
-      url: `https://iskcon-e-city-phase-1-two.vercel.app//blog/${id}`,
+      url: `https://iskcon-e-city-phase-1-two.vercel.app/blog/${id}`,
       publishedTime: blog.date,
       tags: blog.tags,
       images: [

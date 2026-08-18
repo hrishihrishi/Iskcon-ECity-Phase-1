@@ -18,9 +18,9 @@ export const metadata: Metadata = {
   description:
     "Get in touch with ISKCON Electronic City. Find our address at Electronic City Phase 1, Hosur Road, Bengaluru 560100, phone number, email, and social media links. Visit us for daily darshan and programs.",
   alternates: {
-    canonical: "https://iskcon-e-city-phase-1-two.vercel.app//contact",
+    canonical: "https://iskcon-e-city-phase-1-two.vercel.app/contact",
   },
-  openGraph: { url: "https://iskcon-e-city-phase-1-two.vercel.app//contact" },
+  openGraph: { url: "https://iskcon-e-city-phase-1-two.vercel.app/contact" },
 };
 
 export default function ContactUsPage() {

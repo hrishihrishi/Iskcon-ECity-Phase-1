@@ -11,7 +11,7 @@ export default function robots(): MetadataRoute.Robots {
         disallow: ["/api/", "/blog/admin", "/_next/", "/server-sitemap.xml"],
       },
     ],
-    sitemap: "https://iskcon-e-city-phase-1-two.vercel.app//sitemap.xml",
+    sitemap: "https://iskcon-e-city-phase-1-two.vercel.app/sitemap.xml",
     host: "https://iskcon-e-city-phase-1-two.vercel.app/",
   };
 }
