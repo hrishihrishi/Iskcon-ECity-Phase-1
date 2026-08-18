@@ -21,7 +21,7 @@ export default function JanmashtamiPage() {
         <div className=" bg-[#fffdf8] border border-[#e6d0a1] rounded-2xl shadow-xl p-6 sm:p-10 w-full text-center">
           {/* Location Badge */}
           <div className="inline-block bg-[#f8efd8] text-[#5c2a41] border border-[#e6d0a1] rounded-full px-4 sm:px-6 py-2 text-[10px] sm:text-xs tracking-[0.15em] sm:mb-8">
-            • ISKCON SARJAPUR ROAD • SHUBH ENCLAVE
+            • ISKCON ELECTRONIC CITY •
           </div>
 
           {/* Title Section */}

@@ -1,5 +1,16 @@
+import type { Metadata } from "next";
 import PageHeader from "@/shared/components/page-header";
 import Image from "next/image";
+
+export const metadata: Metadata = {
+  title: "About ISKCON | Srila Prabhupada & Our Mission",
+  description:
+    "Learn about ISKCON Electronic City's spiritual lineage, our Founder-Acharya His Divine Grace A.C. Bhaktivedanta Swami Prabhupada, and our mission of spreading Bhakti Yoga and Vedic wisdom across Bengaluru.",
+  alternates: {
+    canonical: "https://iskcon-e-city-phase-1-two.vercel.app//about",
+  },
+  openGraph: { url: "https://iskcon-e-city-phase-1-two.vercel.app//about" },
+};
 
 const Founder = () => {
   return (
@@ -9,7 +20,7 @@ const Founder = () => {
           <Image
             src={"/images/prabhupada_smiling.svg"}
             fill={true}
-            alt="Srila Prabhupada"
+            alt="Srila Prabhupada — Founder-Acharya of ISKCON Electronic City Bengaluru"
             className="object-contain drop-shadow-md"
             priority
           />
@@ -30,7 +41,7 @@ const Founder = () => {
         {/* Content Paragraphs */}
         <div className="space-y-6 text-[#4f453f] text-base md:text-lg leading-relaxed font-body">
           <p>{`Born in 1896 in Calcutta, India, His Divine Grace A.C. Bhaktivedanta Swami Prabhupada had a transformative encounter with his spiritual mentor, Srila Bhaktisiddhanta Sarasvati Gosvami, in Calcutta in 1922. Srila Bhaktisiddhanta Sarasvati, a revered religious scholar and the founder of sixty-four Gaudiya Mathas (Vedic institutes), recognized the potential in this educated young man and persuaded him to devote his life to imparting Vedic knowledge. Srila Prabhupada formally became his disciple in 1933.`}</p>
-          
+
           <p>
             {`During their initial meeting, Srila Bhaktisiddhanta Sarasvati urged Srila Prabhupada to disseminate Vedic wisdom in English. In the ensuing years, Srila Prabhupada wrote a commentary on the Bhagavad-gita, supported the Gaudiya Matha's endeavors, and, in 1944, initiated the publication of Back to Godhead, an English bi-weekly magazine. Operating single-handedly, Srila Prabhupada handled editing, manuscript typing, galley proof checks, and distribution. His disciples in the West now continue the magazine.`}
           </p>
@@ -67,37 +78,48 @@ const Founder = () => {
 
           <ul className="grid grid-cols-1 md:grid-cols-2 gap-4 text-[#4f453f] text-sm md:text-base">
             <li className="bg-[#fff3d2]/50 p-3.5 rounded-lg border border-amber-900/5">
-              <strong className="text-[#221b00]">1954:</strong> Left family, entered vanaprastha
+              <strong className="text-[#221b00]">1954:</strong> Left family,
+              entered vanaprastha
             </li>
             <li className="bg-[#fff3d2]/50 p-3.5 rounded-lg border border-amber-900/5">
-              <strong className="text-[#221b00]">1956:</strong> Resided in Vrindavan, Vamsi Gopal temple
+              <strong className="text-[#221b00]">1956:</strong> Resided in
+              Vrindavan, Vamsi Gopal temple
             </li>
             <li className="bg-[#fff3d2]/50 p-3.5 rounded-lg border border-amber-900/5">
-              <strong className="text-[#221b00]">1959:</strong> Began translating Srimad Bhagavatam in Delhi
+              <strong className="text-[#221b00]">1959:</strong> Began
+              translating Srimad Bhagavatam in Delhi
             </li>
             <li className="bg-[#fff3d2]/50 p-3.5 rounded-lg border border-amber-900/5">
-              <strong className="text-[#221b00]">July 1959:</strong> Moved upstairs to Radha-Damodara temple
+              <strong className="text-[#221b00]">July 1959:</strong> Moved
+              upstairs to Radha-Damodara temple
             </li>
             <li className="bg-[#fff3d2]/50 p-3.5 rounded-lg border border-amber-900/5">
-              <strong className="text-[#221b00]">Sept. 17, 1959:</strong> Took sannyasa, renounced order of life
+              <strong className="text-[#221b00]">Sept. 17, 1959:</strong> Took
+              sannyasa, renounced order of life
             </li>
             <li className="bg-[#fff3d2]/50 p-3.5 rounded-lg border border-amber-900/5">
-              <strong className="text-[#221b00]">1960 Fall:</strong> Published Easy Journey to Other Planets
+              <strong className="text-[#221b00]">1960 Fall:</strong> Published
+              Easy Journey to Other Planets
             </li>
             <li className="bg-[#fff3d2]/50 p-3.5 rounded-lg border border-amber-900/5">
-              <strong className="text-[#221b00]">1962 July:</strong> Moved to downstairs rooms at Radha-Damodara
+              <strong className="text-[#221b00]">1962 July:</strong> Moved to
+              downstairs rooms at Radha-Damodara
             </li>
             <li className="bg-[#fff3d2]/50 p-3.5 rounded-lg border border-amber-900/5">
-              <strong className="text-[#221b00]">1962-1964:</strong> Published Volumes 1-3 Srimad Bhagavatam
+              <strong className="text-[#221b00]">1962-1964:</strong> Published
+              Volumes 1-3 Srimad Bhagavatam
             </li>
             <li className="bg-[#fff3d2]/50 p-3.5 rounded-lg border border-amber-900/5">
-              <strong className="text-[#221b00]">1965 Aug 13:</strong> Departed Calcutta on Jaladuta for America
+              <strong className="text-[#221b00]">1965 Aug 13:</strong> Departed
+              Calcutta on Jaladuta for America
             </li>
             <li className="bg-[#fff3d2]/50 p-3.5 rounded-lg border border-amber-900/5">
-              <strong className="text-[#221b00]">1967-1972:</strong> Returned to Radha-Damodara, delivered lectures
+              <strong className="text-[#221b00]">1967-1972:</strong> Returned to
+              Radha-Damodara, delivered lectures
             </li>
             <li className="bg-[#fff3d2]/50 p-3.5 rounded-lg border border-amber-900/5 col-span-1 md:col-span-2">
-              <strong className="text-[#221b00]">1977:</strong> Entered eternal lila of Radha &amp; Krishna in Goloka Vrindavan
+              <strong className="text-[#221b00]">1977:</strong> Entered eternal
+              lila of Radha &amp; Krishna in Goloka Vrindavan
             </li>
           </ul>
 

@@ -1,9 +1,20 @@
 // src/app/(client_modules)/blog/page.tsx
 
+import type { Metadata } from "next";
 import { getAllBlogs } from "@/app/(client_modules)/blog/blog.actions";
 import BlogCard from "@/shared/componentsCreatedByMe/BlogCard";
 
 export const dynamic = "force-dynamic";
+
+export const metadata: Metadata = {
+  title: "Devotional Blog | Spiritual Articles & Temple Updates",
+  description:
+    "Read spiritual insights, Bhakti Yoga teachings, festival updates, and temple news from ISKCON Electronic City, Bengaluru. Explore articles on Krishna consciousness, prasadam, and devotional life in E-City.",
+  alternates: {
+    canonical: "https://iskcon-e-city-phase-1-two.vercel.app//blog",
+  },
+  openGraph: { url: "https://iskcon-e-city-phase-1-two.vercel.app//blog" },
+};
 
 export default async function BlogHome() {
   const blogs = await getAllBlogs();
@@ -20,7 +31,8 @@ export default async function BlogHome() {
             The Devotional Blog
           </h1>
           <p className="text-[#4f453f] text-base md:text-lg">
-            Explore wisdom, teachings, and temple updates preserved for the community.
+            Explore wisdom, teachings, and temple updates preserved for the
+            community.
           </p>
         </div>
 
@@ -42,9 +54,7 @@ export default async function BlogHome() {
         {/* Blog Grid */}
         <section className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
           {blogs.length > 0 ? (
-            blogs.map((blog) => (
-              <BlogCard data={blog} key={blog.id} />
-            ))
+            blogs.map((blog) => <BlogCard data={blog} key={blog.id} />)
           ) : (
             <p className="col-span-full text-center text-[#745849]">
               No blog posts available at the moment.
