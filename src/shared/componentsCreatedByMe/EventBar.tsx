@@ -1,3 +1,4 @@
+// EventBar.tsx
 'use client';
 
 import React, { useState, useEffect } from 'react';
@@ -26,39 +27,36 @@ export default function EventBar() {
   }, []);
 
   return (
-    <nav className="bg-[#4b1d3f] text-[#ebd197] px-4 py-3 md:px-8 font-serif shadow-md w-full">
-      <div className="max-w-9xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
+    // <div className="w-full p-[2px] animate-conic-gold rounded-lg">
+    // <div className="w-full p-[2px] animate-gold-shimmer shadow-xl shadow-amber-500/20">
+    <div className="w-full p-[2px] animate-aura-gold z-5">
+      <nav className="bg-[#4b1d3f] text-[#FFD700] px-3 py-2 md:px-8 font-serif shadow-md w-full">
+      <div className="max-w-9xl mx-auto flex flex-row items-center justify-between gap-2 md:gap-4">
         
-        {/* Top/Left Branding */}
-        <div className="flex items-center justify-between w-full md:w-auto">
-          <h1 className="flex items-center justify-center w-full text-lg md:text-2xl font-bold tracking-wide md:hidden">
-            Shree Krishna Janmashtami
-          </h1>
-        </div>
-
-        {/* Desktop Title */}
-        <h1 className="hidden md:block sm:text-2xl md:text-4xl lg:text-4xl font-bold tracking-wide text-left">
-          Shree Krishna Janmashtami
+        {/* Title */}
+<h1 className="text-md sm:text-sm md:text-4xl font-bold tracking-wide text-left rounded-lg">          Shree Krishna Janmashtami
         </h1>
 
         {/* Live Countdown & CTA */}
-        <div className="flex flex-wrap items-center justify-center md:justify-end gap-6 w-full md:w-auto">
-          <div className="font-sans flex items-center gap-2 pr-4 text-2xl">
-            <span><strong className="text-3xl font-serif">{timeLeft.days}</strong>d</span>
-            <span><strong className="text-3xl font-serif">{timeLeft.hours}</strong>h</span>
-            <span><strong className="text-3xl font-serif">{timeLeft.minutes}</strong>m</span>
-            <span><strong className="text-3xl font-serif">{timeLeft.seconds}</strong>s</span>
+        <div className="flex items-center justify-end gap-2 md:gap-6">
+          <div className="font-sans flex items-center gap-1 md:gap-2 text-xs md:text-2xl">
+            <span><strong className="text-sm md:text-3xl font-serif">{timeLeft.days}</strong>d</span>
+            <span><strong className="text-sm md:text-3xl font-serif">{timeLeft.hours}</strong>h</span>
+            <span><strong className="text-sm md:text-3xl font-serif">{timeLeft.minutes}</strong>m</span>
+            <span><strong className="text-sm md:text-3xl font-serif">{timeLeft.seconds}</strong>s</span>
           </div>
 
           <button 
-          onClick={() => {window.location.href = '/janmastami'}}
-            
-          className="bg-gradient-to-r from-[#e3b964] via-[#f4d485] to-[#e3b964] text-black px-5 py-1.5 md:px-6 md:py-2 rounded-full font-bold text-2xl md:text-2xl hover:opacity-90 transition-opacity">
-            See programme &rarr;
+            onClick={() => { window.location.href = '/janmastami'; }}
+            aria-label="See programme"
+            className="bg-gradient-to-r from-[#e3b964] via-[#f4d485] to-[#e3b964] text-black px-2.5 py-1 md:px-6 md:py-2 rounded-full font-bold text-xs md:text-2xl hover:opacity-90 transition-opacity flex items-center justify-center"
+          >
+            <span className="hidden md:inline mr-1">See programme</span> &rarr;
           </button>
         </div>
 
       </div>
     </nav>
+    </div>
   );
 }

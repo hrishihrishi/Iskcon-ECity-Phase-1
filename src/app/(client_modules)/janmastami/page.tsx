@@ -3,6 +3,7 @@
 import React, { useEffect, useRef } from "react";
 import { ScheduleGrid } from "./components/schedule";
 import { SevaSlabs } from "./components/sevaSlabs";
+import EventBanner from "@/shared/componentsCreatedByMe/CTA";
 
 export default function JanmashtamiPage() {
   const sevaSlabsRef = useRef<HTMLDivElement>(null);

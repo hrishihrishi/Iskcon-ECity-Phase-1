@@ -4,6 +4,7 @@ import "./globals.css";
 import Navbar from "@/shared/componentsCreatedByMe/Navbar";
 import Footer from "@/shared/componentsCreatedByMe/Footer";
 import EventBar from "@/shared/componentsCreatedByMe/EventBar";
+import CTA from "@/shared/componentsCreatedByMe/CTA";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -120,6 +121,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           <EventBar />
         </header>
         {children}
+        <CTA />
         <Footer />
       </body>
     </html>
