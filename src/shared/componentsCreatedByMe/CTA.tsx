@@ -19,7 +19,7 @@ export const CTA: React.FC<EventBannerProps> = ({
   onCallClick,
 }) => {
   return (
-    <div className="fixed bottom-3 flex md:hidden lg:hidden items-center justify-between gap-4 rounded-3xl bg-[#2A081A] text-[#F3E5AB] shadow-xl border border-[#4A152D]/50 max-w-md w-full p-2">
+    <div className="fixed bottom-3 left-1/2 -translate-x-1/2 z-40 flex md:hidden lg:hidden items-center justify-between gap-4 rounded-3xl bg-[#2A081A] text-[#F3E5AB] shadow-xl border border-[#4A152D]/50 max-w-md w-full p-2">
       {/* Left Content */}
       <div className="flex flex-col text-left">
         <h2 className="text-sm font-bold tracking-wider uppercase text-[#E5C158] leading-tight">
