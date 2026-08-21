@@ -32,8 +32,8 @@ export const CTA: React.FC<EventBannerProps> = ({
     <div className="fixed bottom-3 left-1/2 -translate-x-1/2 z-40 flex md:hidden lg:hidden items-center justify-between gap-4 rounded-3xl bg-[#2A081A] text-[#F3E5AB] shadow-xl border border-[#4A152D]/50 max-w-md w-full p-2">
       {/* Left Content */}
       <div className="flex flex-col text-left">
-        <h2 className="text-sm font-bold tracking-wider uppercase text-[#E5C158] leading-tight">
-          {title} <span className="inline-block mx-1">•</span> {date}
+        <h2 className="text-xs font-bold tracking-wider text-[#E5C158] leading-tight">
+          {title} <span className="hidden sm:inline-block mx-1">•</span> <span className="block sm:inline text-xs">{date}</span>
         </h2>
         <p className="text-xs text-white/90 font-medium mt-1 leading-snug">
           {time} 

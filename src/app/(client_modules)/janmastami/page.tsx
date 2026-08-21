@@ -51,7 +51,7 @@ export default function JanmashtamiPage() {
             </div>
             <div className="bg-[#1c4d43] px-4 sm:px-6 py-2.5 sm:py-3 font-semibold">FRI</div>
             <div className="bg-[#5c2a41] px-4 sm:px-6 py-2.5 sm:py-3 font-semibold tracking-wider">
-              7 AM - MIDNIGHT
+              4:00 PM - 1:00 AM (mid-night)
             </div>
           </div>
 

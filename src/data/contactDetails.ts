@@ -1,6 +1,6 @@
 const TEMPLE = {
-    NAME: "ISKCON ECITY PHSE 1",
-    DESCRIPTION: "This is description for ISKCON ECITY PHSE 1",
+    NAME: "ISKCON ECITY PHASE 1",
+    DESCRIPTION: "Discover the serenity of ISKCON Electronic City Phase 1, your spiritual oasis in Bengaluru. Join us for daily darshans, engaging classes, and vibrant festivals that nourish the soul.",
     PHONE_NUMBER: '8587959484', // Avadhut Nimai
     PHONE_NUMBER_2: '9664614207', // Ravikumar Singh
 
@@ -24,9 +24,9 @@ const TEMPLE = {
     WHATSAPP_CONTACT_NUMBER: '6300686712',
 
     // CTA Banner variables
-    CTA_TITLE: 'SRI KRISHNA JANMASHTAMI',
+    CTA_TITLE: 'Sri Krishna Janmashtami',
     CTA_DATE: 'FRI, 4 SEP',
-    CTA_TIME: '4 PM - 1 AM',
+    CTA_TIME: '4 pm - Midnight 1 am',
 
     // Extra keys populated with "this is x" format
     TWITTER_LINK: 'this is TWITTER_LINK',

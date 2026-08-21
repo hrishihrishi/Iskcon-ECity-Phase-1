@@ -10,8 +10,8 @@ export default function Footer() {
       <div className="iskcon-footer-container">
         {/* Header & About Section */}
         <div>
-          <h2 className="iskcon-footer-title">{TEMPLE.NAME}</h2>
-          <p className="iskcon-footer-text">
+          <h2 className="iskcon-footer-title text-3xl ">{TEMPLE.NAME}</h2>
+          <p className="iskcon-footer-text lg:text-xl">
             {TEMPLE.DESCRIPTION}
           </p>
 
@@ -59,7 +59,7 @@ export default function Footer() {
         {/* Contact Information */}
         <div>
           <h3 className="iskcon-footer-subtitle">Contact Us</h3>
-          <div className="iskcon-contact-list">
+          <div className="iskcon-contact-list lg:text-xl">
             <div className="iskcon-contact-item">
               <MapPin size={20} className="iskcon-contact-icon" />
               <span>
@@ -75,7 +75,7 @@ export default function Footer() {
                 {TEMPLE.EMAIL}
               </a>
             </div>
-            <div className="iskcon-contact-item">
+            <div className="iskcon-contact-item ">
               <Phone size={20} className="iskcon-contact-icon" />
               <a href={`tel:${TEMPLE.PHONE_NUMBER}`} className="iskcon-contact-link">
                 {TEMPLE.PHONE_NUMBER}
@@ -93,11 +93,13 @@ export default function Footer() {
             gap: "1rem",
           }}
         >
+          <div>
           <h3 className="iskcon-footer-subtitle">Support Our Cause</h3>
-          <p className="iskcon-footer-text">
+          <p className="iskcon-footer-text lg:text-xl">
             Your generous contributions help maintain temple activities,
             prasadam distribution, and community outreach.
           </p>
+          </div>
           <div>
             <Link href="/donate" className="iskcon-donate-btn">
               Donate Now
