@@ -1,5 +1,7 @@
-// components/EventBanner.tsx
+"use client";
+
 import React from 'react';
+import TEMPLE from '@/data/contactDetails';
 
 interface EventBannerProps {
   title?: string;
@@ -11,12 +13,20 @@ interface EventBannerProps {
 }
 
 export const CTA: React.FC<EventBannerProps> = ({
-  title = "JANMASHTAMI",
-  date = "FRI, 4 SEP",
-  time = "7 AM ",
-  location = "Shubh Enclave, Haralur Road",
-  onMapClick,
-  onCallClick,
+  title = TEMPLE.CTA_TITLE,
+  date = TEMPLE.CTA_DATE,
+  time = TEMPLE.CTA_TIME,
+  location = TEMPLE.JANMASHTAMI_ADDRESS,
+  onMapClick = () => {
+    if (typeof window !== 'undefined') {
+      window.open(TEMPLE.JANMASHTAMI_GMAPS_LINK, '_blank');
+    }
+  },
+  onCallClick = () => {
+    if (typeof window !== 'undefined') {
+      window.location.href = `tel:${TEMPLE.PHONE_NUMBER}`;
+    }
+  },
 }) => {
   return (
     <div className="fixed bottom-3 left-1/2 -translate-x-1/2 z-40 flex md:hidden lg:hidden items-center justify-between gap-4 rounded-3xl bg-[#2A081A] text-[#F3E5AB] shadow-xl border border-[#4A152D]/50 max-w-md w-full p-2">

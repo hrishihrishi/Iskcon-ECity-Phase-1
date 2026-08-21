@@ -1,9 +1,8 @@
 import Link from "next/link";
 import { MapPin, Mail, Phone, MessageCircle } from "lucide-react";
 import { FaFacebook, FaInstagram, FaYoutube } from "react-icons/fa";
-
 import "@/app/globals.css";
-import { CONTACT_DETAILS } from "@/constants/contactDetails";
+import TEMPLE from "@/data/contactDetails";
 
 export default function Footer() {
   return (
@@ -11,15 +10,15 @@ export default function Footer() {
       <div className="iskcon-footer-container">
         {/* Header & About Section */}
         <div>
-          <h2 className="iskcon-footer-title">{CONTACT_DETAILS.name}</h2>
+          <h2 className="iskcon-footer-title">{TEMPLE.NAME}</h2>
           <p className="iskcon-footer-text">
-            {CONTACT_DETAILS.description}
+            {TEMPLE.DESCRIPTION}
           </p>
 
           {/* Social Media Links */}
           <div className="iskcon-social-links">
             <a
-              href={CONTACT_DETAILS.socialLinks.facebook}
+              href={TEMPLE.FACEBOOK_LINK}
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Facebook"
@@ -28,7 +27,7 @@ export default function Footer() {
               <FaFacebook size={20} />
             </a>
             <a
-              href={CONTACT_DETAILS.socialLinks.instagram}
+              href={TEMPLE.INSTAGRAM_LINK}
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Instagram"
@@ -37,7 +36,7 @@ export default function Footer() {
               <FaInstagram size={20} />
             </a>
             <a
-              href={CONTACT_DETAILS.socialLinks.whatsapp}
+              href={TEMPLE.WHATSAPP_GROUP_LINK}
               target="_blank"
               rel="noopener noreferrer"
               aria-label="WhatsApp"
@@ -46,7 +45,7 @@ export default function Footer() {
               <MessageCircle size={20} />
             </a>
             <a
-              href={CONTACT_DETAILS.socialLinks.youtube}
+              href={TEMPLE.YOUTUBE_LINK}
               target="_blank"
               rel="noopener noreferrer"
               aria-label="YouTube"
@@ -64,22 +63,22 @@ export default function Footer() {
             <div className="iskcon-contact-item">
               <MapPin size={20} className="iskcon-contact-icon" />
               <span>
-                {CONTACT_DETAILS.shortAddress}
+                {TEMPLE.SHORT_ADDRESS}
               </span>
             </div>
             <div className="iskcon-contact-item">
               <Mail size={20} className="iskcon-contact-icon" />
               <a
-                href={`mailto:${CONTACT_DETAILS.email}`}
+                href={`mailto:${TEMPLE.EMAIL}`}
                 className="iskcon-contact-link"
               >
-                {CONTACT_DETAILS.email}
+                {TEMPLE.EMAIL}
               </a>
             </div>
             <div className="iskcon-contact-item">
               <Phone size={20} className="iskcon-contact-icon" />
-              <a href={`tel:${CONTACT_DETAILS.phoneRaw}`} className="iskcon-contact-link">
-                {CONTACT_DETAILS.phone}
+              <a href={`tel:${TEMPLE.PHONE_NUMBER}`} className="iskcon-contact-link">
+                {TEMPLE.PHONE_NUMBER}
               </a>
             </div>
           </div>
@@ -110,8 +109,7 @@ export default function Footer() {
       {/* Footer Bottom Line */}
       <div className="iskcon-footer-bottom">
         <p>
-          &copy; {new Date().getFullYear()} {CONTACT_DETAILS.name}. All Rights
-          Reserved.
+          &copy; {new Date().getFullYear()} {TEMPLE.NAME}. All Rights Reserved.
         </p>
       </div>
     </footer>

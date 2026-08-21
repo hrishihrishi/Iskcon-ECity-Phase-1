@@ -11,7 +11,7 @@ export default function JanmashtamiPage() {
   useEffect(() => {
     const timer = setTimeout(() => {
       sevaSlabsRef.current?.scrollIntoView({ behavior: "smooth" });
-    }, 2500);
+    }, 2000);
 
     return () => clearTimeout(timer);
   }, []);

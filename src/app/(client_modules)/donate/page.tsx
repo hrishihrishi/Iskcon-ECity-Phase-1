@@ -22,7 +22,7 @@ import {
   HelpCircle,
   ArrowRight,
 } from "lucide-react";
-import { CONTACT_DETAILS } from "@/constants/contactDetails";
+import TEMPLE from "@/data/contactDetails";
 
 interface ExpenseItem {
   category: string;
@@ -186,16 +186,16 @@ export default function DonatePage() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 pt-2">
                 <a
-                  href={`tel:${CONTACT_DETAILS.phone}`}
+                  href={`tel:${TEMPLE.PHONE_NUMBER}`}
                   className="inline-flex items-center gap-2 text-xs font-semibold text-slate-700 bg-white border border-slate-200 px-4 py-2.5 rounded-lg hover:border-amber-500 hover:text-amber-600 transition-colors shadow-sm"
                 >
-                  <Phone size={14} /> {CONTACT_DETAILS.phone}
+                  <Phone size={14} /> {TEMPLE.PHONE_NUMBER}
                 </a>
                 <a
-                  href={`mailto:${CONTACT_DETAILS.email}`}
+                  href={`mailto:${TEMPLE.EMAIL}`}
                   className="inline-flex items-center gap-2 text-xs font-semibold text-slate-700 bg-white border border-slate-200 px-4 py-2.5 rounded-lg hover:border-amber-500 hover:text-amber-600 transition-colors shadow-sm"
                 >
-                  <Mail size={14} /> {CONTACT_DETAILS.email}
+                  <Mail size={14} /> {TEMPLE.EMAIL}
                 </a>
               </div>
             </div>

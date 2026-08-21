@@ -11,7 +11,7 @@ import {
   FaMapMarkerAlt,
   FaHeart,
 } from "react-icons/fa";
-import { CONTACT_DETAILS } from "@/constants/contactDetails";
+import TEMPLE from "@/data/contactDetails";
 
 export const metadata: Metadata = {
   title: "Contact Us | Visit ISKCON Electronic City Temple",
@@ -29,21 +29,21 @@ export default function ContactUsPage() {
       {/* Hero Header Section */}
       <section className="bg-[#75bad3] text-white py-16 px-4 text-center relative overflow-hidden">
         <div className="max-w-4xl mx-auto relative z-10">
-          <span className="uppercase tracking-widest text-xs font-bold bg-white/20 px-4 py-1.5 rounded-full inline-block mb-4">
+          {/* <span className="uppercase tracking-widest text-xs font-bold bg-white/20 px-4 py-1.5 rounded-full inline-block mb-4">
             Connect With The Temple
-          </span>
+          </span> */}
           <h1 className="text-4xl md:text-5xl font-bold mb-4 font-serif">
             Contact Us
           </h1>
           <p className="text-amber-100 text-base md:text-lg max-w-2xl mx-auto">
-            We would love to hear from you. Visit our temple, participate in our
-            programs, or reach out with your spiritual inquiries.
+            We would love to hear from you. Visit our temple, participate in
+            programs, ask spiritual inquiries.
           </p>
         </div>
       </section>
 
       {/* Bhagavad Gita Quote Section */}
-      <section className="max-w-4xl mx-auto px-4 -mt-8 relative z-20 mb-16">
+      <section className="max-w-4xl mx-auto px-4 -mt-8 relative z-20 mb-8">
         <div className="bg-white rounded-2xl p-8 border border-amber-900/10 shadow-[0_4px_20px_rgba(200,77,0,0.05)] text-center">
           <p className="text-xs font-bold text-[#e8621a] tracking-wider uppercase mb-2">
             Bhagavad Gita As It Is • 9.14
@@ -74,7 +74,7 @@ export default function ContactUsPage() {
                 <div>
                   <h3 className="font-semibold text-[#221b00]">Address</h3>
                   <p className="text-[#4f453f] text-sm mt-1">
-                    {CONTACT_DETAILS.address}
+                    {TEMPLE.CENTRE_ADDRESS}
                   </p>
                 </div>
               </li>
@@ -88,7 +88,10 @@ export default function ContactUsPage() {
                     Phone Support
                   </h3>
                   <p className="text-[#4f453f] text-sm mt-1">
-                    {CONTACT_DETAILS.phoneSupport}
+                    {TEMPLE.PHONE_NUMBER} (Avadhut Nimai)
+                  </p>
+                  <p className="text-[#4f453f] text-sm mt-1">
+                    {TEMPLE.PHONE_NUMBER_2} (Ravikumar Singh)
                   </p>
                 </div>
               </li>
@@ -102,7 +105,7 @@ export default function ContactUsPage() {
                     Email Address
                   </h3>
                   <p className="text-[#4f453f] text-sm mt-1">
-                    {CONTACT_DETAILS.outreachEmail}
+                    {TEMPLE.EMAIL}
                   </p>
                 </div>
               </li>
@@ -115,7 +118,7 @@ export default function ContactUsPage() {
               </h3>
               <div className="flex space-x-4">
                 <Link
-                  href={CONTACT_DETAILS.socialLinks.facebook}
+                  href={TEMPLE.FACEBOOK_LINK}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="bg-[#fff3d2] text-[#745849] hover:bg-[#e8621a] hover:text-white p-3 rounded-full transition-colors duration-200"
@@ -123,7 +126,7 @@ export default function ContactUsPage() {
                   <FaFacebook className="w-5 h-5" />
                 </Link>
                 <Link
-                  href={CONTACT_DETAILS.socialLinks.instagram}
+                  href={TEMPLE.INSTAGRAM_LINK}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="bg-[#fff3d2] text-[#745849] hover:bg-[#e8621a] hover:text-white p-3 rounded-full transition-colors duration-200"
@@ -131,7 +134,7 @@ export default function ContactUsPage() {
                   <FaInstagram className="w-5 h-5" />
                 </Link>
                 <Link
-                  href={CONTACT_DETAILS.socialLinks.youtube}
+                  href={TEMPLE.YOUTUBE_LINK}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="bg-[#fff3d2] text-[#745849] hover:bg-[#e8621a] hover:text-white p-3 rounded-full transition-colors duration-200"
@@ -139,7 +142,7 @@ export default function ContactUsPage() {
                   <FaYoutube className="w-5 h-5" />
                 </Link>
                 <Link
-                  href={CONTACT_DETAILS.socialLinks.twitter}
+                  href={TEMPLE.TWITTER_LINK}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="bg-[#fff3d2] text-[#745849] hover:bg-[#e8621a] hover:text-white p-3 rounded-full transition-colors duration-200"
@@ -159,7 +162,7 @@ export default function ContactUsPage() {
           <div className="w-full flex-1 rounded-xl overflow-hidden relative">
             <iframe
               title="ISKCON Temple Location"
-              src={CONTACT_DETAILS.mapEmbedUrl}
+              src={TEMPLE.MAP_EMBED_URL}
               width="100%"
               height="100%"
               style={{ border: 0 }}
