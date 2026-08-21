@@ -152,12 +152,22 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* padding: 0 16px;  */
   max-width: 1280px; 
   margin: 0 auto;
-  min-height: 3rem;
+  min-height: 2.5rem;
   flex-wrap: wrap;
-  gap: 12px;
+  gap: 8px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+@media (min-width: 768px) {
+  .navbar-container {
+    min-height: 3rem;
+    gap: 12px;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
 }
 
 .navbar-brand {
@@ -215,14 +225,19 @@
   background-color: #4ab5e7; 
   color: #ffffff; 
   font-family: 'Chivo', sans-serif;
-  /* font-size: 12px; */
   letter-spacing: 0.05em;
   font-weight: 700;
-  padding: 8px 16px; 
+  padding: 4px 10px; 
   border-radius: 9999px; 
   text-decoration: none;
   transition: background-color 0.3s;
   white-space: nowrap;
+}
+
+@media (min-width: 768px) {
+  .donate-btn {
+    padding: 8px 16px;
+  }
 }
 
 .donate-btn:hover {

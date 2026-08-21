@@ -38,11 +38,10 @@ const Navbar: React.FC = () => {
               alt="logo"
               width={100}
               height={100}
-              className="md:block lg:block rounded-lg"
+              className="h-10 w-auto md:h-16 lg:h-20 rounded-lg object-contain"
             />
           </div>
         </div>
-
         <ul className="navbar-nav sm:text-[4.5vw] md:text-[2vw] lg:text-[1.5vw]">
           {NAV_LINKS.map((link) => {
             const isActive =
@@ -62,11 +61,10 @@ const Navbar: React.FC = () => {
             );
           })}
         </ul>
-
         <div className="flex flex-row items-center gap-2">
           <Link
             href="/donate"
-            className="donate-btn lg:w-auto md:w-full text-center sm:text-xl md:text-2xl lg:text-2xl md:mb-4 lg:mb-4"
+            className="donate-btn lg:w-auto md:w-full text-center text-sm sm:text-base md:text-2xl lg:text-2xl"
           >
             Donate Now
           </Link>
@@ -103,7 +101,6 @@ const Navbar: React.FC = () => {
             </button>
           </div>
         </div>
-
         {/* Dropdown */}
         {isOpen && (
           <ul className="md:hidden absolute top-full right-3 flex flex-col bg-[#0f4c81] text-white p-4 space-y-3 border-l-4 border-l-yellow-400 shadow-2xl rounded-b-lg z-[9999] min-w-[180px]">
