@@ -41,7 +41,7 @@ export default function BannerSlider({ data, autoPlayInterval = 5000 }: BannerSl
   };
 
   return (
-    <div className="relative w-full overflow-hidden bg-[#5974cc]">
+    <div className="relative w-full overflow-hidden bg-[#5974cc] z-5">
       <div className="relative h-[500px] w-full md:h-[620px]">
         {data.map((item, index) => (
           <div

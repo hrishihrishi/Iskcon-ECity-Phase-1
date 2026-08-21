@@ -1,6 +1,18 @@
+import type { Metadata } from "next";
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+
+export const metadata: Metadata = {
+  title: "Donate | Support ISKCON Electronic City Sevas & Programs",
+  description:
+    "Donate to ISKCON Electronic City and support Anna Dana (free meal distribution), deity worship sevas, Bhakti Yoga programs, and community outreach in Bengaluru's Electronic City. Your offering makes a difference.",
+  alternates: {
+    canonical: "https://iskcon-e-city-phase-1-two.vercel.app/donate",
+  },
+  openGraph: { url: "https://iskcon-e-city-phase-1-two.vercel.app/donate" },
+};
+
 import {
   Mail,
   Phone,
@@ -11,8 +23,6 @@ import {
   ArrowRight,
 } from "lucide-react";
 import { CONTACT_DETAILS } from "@/constants/contactDetails";
-
-
 
 interface ExpenseItem {
   category: string;
@@ -95,8 +105,6 @@ export default function DonatePage() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
           {/* QR Code Card */}
           <div className="lg:col-span-5 bg-white rounded-2xl border border-slate-200 p-8 shadow-sm text-center flex flex-col items-center">
-
-
             <div className="p-4 bg-slate-50 border border-slate-100 rounded-xl mb-6 shadow-inner">
               <Image
                 src="/images/QRcode.png"
@@ -107,8 +115,6 @@ export default function DonatePage() {
                 priority
               />
             </div>
-
-
 
             <div className="w-full pt-6 border-t border-slate-100 space-y-3 text-left">
               <div className="flex items-center justify-between text-xs sm:text-sm">
