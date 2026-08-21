@@ -201,6 +201,7 @@
   color: #FFD700; /* on-surface-variant */
   transition: color 0.3s;
   white-space: nowrap;
+  text-decoration: underline wavy;
 }
 
 .nav-link:hover {
@@ -213,10 +214,8 @@
   border: 2px solid #FFD700; 
   padding: 4px 12px; /* Added extra horizontal padding so rounded corners look balanced */
   white-space: nowrap;
-  
   /* Rounded Corners */
   border-radius: 8px; 
-  
   /* Golden Shadow Glow */
   box-shadow: 0 0 12px rgba(255, 215, 0, 0.5); 
 }
