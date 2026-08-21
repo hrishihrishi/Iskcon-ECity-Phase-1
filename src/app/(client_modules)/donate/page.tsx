@@ -34,28 +34,28 @@ interface ExpenseItem {
 const EXPENSE_DATA: ExpenseItem[] = [
   {
     category: "Prasadam Distribution",
-    monthlyAmount: "₹1,80,000",
+    monthlyAmount: "₹50,000",
     percentage: "40%",
     description:
       "Free daily sanctified meals for devotees, visitors, and underprivileged communities.",
   },
   {
     category: "Rent & Infrastructure",
-    monthlyAmount: "₹1,35,000",
+    monthlyAmount: "₹35,000",
     percentage: "30%",
     description:
       "Main center lease, deity alter maintenance, hall setup, and utility operational costs.",
   },
   {
     category: "Transport & Logistics",
-    monthlyAmount: "₹67,500",
+    monthlyAmount: "₹20,500",
     percentage: "15%",
     description:
       "Outreach movement, book distribution vehicles, and event setup logistics.",
   },
   {
     category: "Others & Emergency",
-    monthlyAmount: "₹67,500",
+    monthlyAmount: "₹10,500",
     percentage: "15%",
     description:
       "Festival celebrations, guest speaker care, digital outreach, and contingency funds.",
@@ -66,10 +66,10 @@ export default function DonatePage() {
   return (
     <div className="min-h-screen bg-slate-50 text-slate-800">
       {/* Header Banner */}
-      <section className="bg-slate-900 text-white py-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+      <section className="bg-slate-900 text-white py-10 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
         <div className="absolute inset-0 opacity-10 bg-[radial-gradient(#d97706_1px,transparent_1px)] [background-size:16px_16px]"></div>
         <div className="max-w-5xl mx-auto text-center relative z-10">
-          <span className="inline-block px-3 py-1 bg-amber-500/20 text-amber-400 rounded-full text-xs font-semibold tracking-wider uppercase mb-4 border border-amber-500/30">
+          <span className="inline-block px-3 py-1 bg-amber-500/20 text-amber-400 rounded-full text-sm font-semibold tracking-wider uppercase mb-4 border border-amber-500/30">
             Support Our Mission
           </span>
           <h1 className="text-3xl sm:text-5xl font-extrabold tracking-tight text-white mb-4">
@@ -83,9 +83,9 @@ export default function DonatePage() {
         </div>
       </section>
 
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-12">
+      <div className="max-w-6xl mx-auto px-4 sm:px-3 lg:px-2 py-8 space-y-12">
         {/* Quote Card */}
-        <div className="relative bg-gradient-to-r from-amber-600 to-amber-700 text-white rounded-2xl p-8 sm:p-10 shadow-xl overflow-hidden">
+        <div className="relative bg-gradient-to-r from-amber-600 to-amber-700 text-white rounded-2xl shadow-xl overflow-hidden p-4 lg:px-16">
           <div className="absolute -right-6 -bottom-6 opacity-10 text-white">
             <Heart size={200} />
           </div>
@@ -203,7 +203,7 @@ export default function DonatePage() {
         </div>
 
         {/* Expenses Table Section */}
-        <div className="bg-white rounded-2xl border border-slate-200 shadow-sm p-6 sm:p-8 space-y-6">
+        {/* <div className="bg-white rounded-2xl border border-slate-200 shadow-sm p-6 sm:p-8 space-y-6">
           <div>
             <span className="text-xs font-semibold uppercase tracking-wider text-amber-600">
               Financial Transparency
@@ -252,7 +252,7 @@ export default function DonatePage() {
               </tbody>
             </table>
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
   );
