@@ -4,7 +4,7 @@ export const sampleVideoData: VideoItem[] = [
     {
       id: 1,
       videoUrl: "https://www.youtube.com/embed/7hG6z34rugM?si=68aPXaowahz9gQeB",
-      title: "Krishna katha by Avadut Nimai",
+      title: "Krishna katha by Avadut Nimai Prji",
     },
     {
       id: 2,
