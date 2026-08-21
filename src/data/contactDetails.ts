@@ -26,7 +26,7 @@ const TEMPLE = {
     // CTA Banner variables
     CTA_TITLE: 'SRI KRISHNA JANMASHTAMI',
     CTA_DATE: 'FRI, 4 SEP',
-    CTA_TIME: '7 AM Onwards',
+    CTA_TIME: '4 PM - 1 AM',
 
     // Extra keys populated with "this is x" format
     TWITTER_LINK: 'this is TWITTER_LINK',

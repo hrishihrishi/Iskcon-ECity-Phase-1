@@ -16,7 +16,7 @@ export const CTA: React.FC<EventBannerProps> = ({
   title = TEMPLE.CTA_TITLE,
   date = TEMPLE.CTA_DATE,
   time = TEMPLE.CTA_TIME,
-  location = TEMPLE.JANMASHTAMI_ADDRESS,
+  location = 'Sunshine Smart Kids School',
   onMapClick = () => {
     if (typeof window !== 'undefined') {
       window.open(TEMPLE.JANMASHTAMI_GMAPS_LINK, '_blank');
@@ -36,7 +36,8 @@ export const CTA: React.FC<EventBannerProps> = ({
           {title} <span className="inline-block mx-1">•</span> {date}
         </h2>
         <p className="text-xs text-white/90 font-medium mt-1 leading-snug">
-          {time} <span className="inline-block mx-1">•</span> {location}
+          {time} 
+          {/* {location} */}
         </p>
       </div>
 

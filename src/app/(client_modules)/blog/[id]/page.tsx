@@ -22,7 +22,7 @@ export async function generateMetadata({
     };
   }
 
-  const title = `${blog.title} | ISKCON Electronic City Blog`;
+  const title = `${blog.title} | ISKCON Blog`;
   const description =
     blog.description.length > 160
       ? blog.description.slice(0, 157) + "…"

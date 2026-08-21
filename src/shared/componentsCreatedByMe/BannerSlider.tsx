@@ -1,13 +1,14 @@
-'use client';
-import React, { useState, useEffect } from 'react';
-import Banner from './Banner';
-import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
-import './banner.css';
+"use client";
+import React, { useState, useEffect } from "react";
+import Banner from "./Banner";
+import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
+import "./banner.css";
 
 interface BannerItem {
   id: string | number;
   link: string;
   image: string;
+  buttonText: string;
   title?: string;
   subtitle?: string;
 }
@@ -17,7 +18,10 @@ interface BannerSliderProps {
   autoPlayInterval?: number;
 }
 
-export default function BannerSlider({ data, autoPlayInterval = 5000 }: BannerSliderProps) {
+export default function BannerSlider({
+  data,
+  autoPlayInterval = 5000,
+}: BannerSliderProps) {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
@@ -32,7 +36,9 @@ export default function BannerSlider({ data, autoPlayInterval = 5000 }: BannerSl
 
   const handlePrevSlide = (e: React.MouseEvent) => {
     e.stopPropagation();
-    setCurrentIndex((prevIndex) => (prevIndex === 0 ? data.length - 1 : prevIndex - 1));
+    setCurrentIndex((prevIndex) =>
+      prevIndex === 0 ? data.length - 1 : prevIndex - 1,
+    );
   };
 
   const handleNextSlide = (e: React.MouseEvent) => {
@@ -47,10 +53,18 @@ export default function BannerSlider({ data, autoPlayInterval = 5000 }: BannerSl
           <div
             key={item.id}
             className={`absolute inset-0 banner-fade-slide ${
-              index === currentIndex ? 'pointer-events-auto z-10 opacity-100' : 'pointer-events-none z-0 opacity-0'
+              index === currentIndex
+                ? "pointer-events-auto z-10 opacity-100"
+                : "pointer-events-none z-0 opacity-0"
             }`}
           >
-            <Banner link={item.link} image={item.image} title={item.title} subtitle={item.subtitle} />
+            <Banner
+              link={item.link}
+              image={item.image}
+              buttonText={item.buttonText}
+              title={item.title}
+              subtitle={item.subtitle}
+            />
           </div>
         ))}
       </div>
@@ -76,7 +90,9 @@ export default function BannerSlider({ data, autoPlayInterval = 5000 }: BannerSl
             key={index}
             onClick={() => setCurrentIndex(index)}
             className={`h-2.5 rounded-full transition-all ${
-              index === currentIndex ? 'w-8 bg-orange-500' : 'w-2.5 bg-white/70 hover:bg-white'
+              index === currentIndex
+                ? "w-8 bg-orange-500"
+                : "w-2.5 bg-white/70 hover:bg-white"
             }`}
             aria-label={`Go to slide ${index + 1}`}
           />

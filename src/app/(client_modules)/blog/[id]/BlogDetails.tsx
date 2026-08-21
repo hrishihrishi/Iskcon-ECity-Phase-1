@@ -71,7 +71,7 @@ export default function BlogDetails({
       </div>
 
       {/* Main Layout */}
-      <div className="max-w-7xl mx-auto px-5 md:px-8 grid grid-cols-1 md:grid-cols-12 gap-8">
+      <div className="max-w-9xl mx-auto px-5 md:px-8 grid grid-cols-1 md:grid-cols-12 gap-8">
 
         {/* Floating TOC — desktop only */}
         <aside className="hidden md:block md:col-span-3 sticky top-28 self-start">
@@ -114,11 +114,11 @@ export default function BlogDetails({
         </aside>
 
         {/* Main Article */}
-        <article className="col-span-1 md:col-span-9 lg:col-span-8">
+        <article className="col-span-1 md:col-span-9 lg:col-span-9">
           {/* Article header card */}
-          <div className="bg-white rounded-2xl border border-amber-900/10 shadow-sm overflow-hidden mb-8">
+          <div className="overflow-hidden mb-8">
             {/* Header stripe */}
-            <div className="bg-[#745849] px-8 py-6">
+            <div className="bg-[#745849] px-8 py-6 rounded-4xl">
               <div className="flex items-center gap-3 mb-3">
                 <span className="w-6 h-[1px] bg-amber-300"></span>
                 <span className="text-amber-200 text-xs font-bold uppercase tracking-widest">
@@ -131,7 +131,7 @@ export default function BlogDetails({
             </div>
 
             {/* Body */}
-            <div className="px-8 py-10">
+            <div className="px-2 md:px-8 py-10">
               <p className="text-[#4f453f] text-base md:text-lg leading-relaxed font-serif whitespace-pre-wrap">
                 {blog.body}
               </p>
